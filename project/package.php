@@ -166,7 +166,7 @@ transform: scale(1.15);
     </li>
     
      <li class="nav-item">
-      <a class="nav-link" href="package.php">Package</a>
+      <a class="nav-link active" href="package.php">Package</a>
     </li>
    
      <li class="nav-item">
@@ -226,33 +226,25 @@ transform: scale(1.15);
 <br><br>
 
     <div class="panel panel-default">
-        <div class="container">
+        
 <center>
 
       <table><tr><td>
-            <div class="col-xs-12 col-md-9" style="background-color:#A4A4A4;">
+            <div class="col-xs-6 col-md-3">
                 
-                    <img src="img\package.jpg" width="250" height="200" alt="... " /><h6 align="center" style="color:#f79f81;">Family<br>2 Days<br /> 5000LKR <br />Palces: Dunhindafall
-                    Namunukula
-                  Narangala</h6>
+                    <img src="img\package.jpg" width="250" height="200" alt="... " /><h6 align="center" style="color:#f79f81;">Family<br>2Days 5000LKR</h6>
                     <a href="package_Booking.php"><button class="btn btn-secondary" type="button">Book</button></a>
                 
             </div></td><td>
-             <div class="col-xs-12 col-md-9" style="background-color:#A4A4A4;">
+             <div class="col-xs-6 col-md-3">
                 
-                    <img src="img\package.jpg" width="250" height="200" alt="... " /><h6 align="center" style="color:#f79f81;">Friends<br>3 Days<br /> 6000LKR <br /> Palces: Dunhindafall
-                    Namunukula
-                  Narangala
-                EllaRock</h6>
+                    <img src="img\package.jpg" width="250" height="200" alt="... " /><h6 align="center" style="color:#f79f81;">Friends<br>3 Days 6000LKR</h6>
                     <a href="package_Booking.php"><button class="btn btn-secondary" type="button">Book</button></a>
                 
             </div></td><td>
-             <div class="col-xs-12 col-md-9" style="background-color:#A4A4A4;">
+             <div class="col-xs-6 col-md-3">
                 
-                    <img src="img\package.jpg" width="250" height="200" alt="... " /><h6 align="center" style="color:#f79f81;">Couple<br>2 Days <br />3000LKR <br />Palces: Dunhindafall
-                    Namunukula
-                  Narangala
-                NineArchBridge</h6>
+                    <img src="img\package.jpg" width="250" height="200" alt="... " /><h6 align="center" style="color:#f79f81;">Couple<br>2 Days 3000LKR</h6>
                     <a href="package_Booking.php"><button class="btn btn-secondary" type="button">Book</button></a>
                 
             </div>

@@ -1,16 +1,4 @@
-<?php
-
-$host = "localhost"; /* Host name */
-$user = "root"; /* User */
-$password = ""; /* Password */
-$dbname = "tutorial"; /* Database name */
-
-$con = mysqli_connect($host, $user, $password,$dbname);
-// Check connection
-if (!$con) {
- die("Connection failed: " . mysqli_connect_error());
-}
-?><HTML lang="en">
+<HTML lang="en">
 <HEAD>
   <TITLE>
   Tourists Transportation and Guiding Management System for a Travel Agency In Badulla  
@@ -132,41 +120,7 @@ transform: scale(1.15);
  
 
 </style>
- <script type="text/javascript">
-        $(function() {
-            $('.rating').barrating({
-                theme: 'fontawesome-stars',
-                onSelect: function(value, text, event) {
-
-                    // Get element id by data-id attribute
-                    var el = this;
-                    var el_id = el.$elem.data('id');
-
-                    // rating was selected by a user
-                    if (typeof(event) !== 'undefined') {
-                        
-                        var split_id = el_id.split("_");
-
-                        var postid = split_id[1];  // postid
-
-                        // AJAX Request
-                        $.ajax({
-                            url: 'rating_ajax.php',
-                            type: 'post',
-                            data: {postid:postid,rating:value},
-                            dataType: 'json',
-                            success: function(data){
-                                // Update average
-                                var average = data['averageRating'];
-                                $('#avgrating_'+postid).text(average);
-                            }
-                        });
-                    }
-                }
-            });
-        });
-      
-        </script>
+ 
 
 </HEAD>
 
@@ -237,7 +191,7 @@ transform: scale(1.15);
     
     
       <li class="nav-item">
-      <a class="nav-link" href="about.php">About Us</a>
+      <a class="nav-link active" href="about.php">About Us</a>
     </li>
 
      <li class="nav-item">
@@ -273,78 +227,28 @@ transform: scale(1.15);
       
 
 </div>
-<div id="commentbackground">
-<p id="para"></p>
-<form>
-  <input type="text" name="name" id="name"><br>
-<textarea id="words" rows="5" cols="100" placeholder="Enter Your Commets"></textarea>
-<input type="button" onclick="getwords()" value="Enter" />
-</form>
-<script type="text/javascript">
-function getwords(){
-text = words.value;
 
-document.getElementById("para").innerHTML = text
-document.getElementById("words").innerHTML = "enter"
-}
-</script>
+<br>
+<div style="border-style:double; background-color:#A9D0F5;">
+
+
+
+<form action ="postcomment.php" method = "POST">
+<br>
+<h2>Enter Your Comment</h2>
+<input type="text" name="name" placeholder="Your name">
+ <br>
+ <br>
+<textarea name="comment" placeholder="Enter the comment" cols="50" rows="2" >  </textarea><br><br>
+<input type="submit" value="Comment">
+</form>
 </div>
 
 
-  <?php
-                $userid = 4;
-                $query = "SELECT * FROM posts";
-                $result = mysqli_query($con,$query);
-                while($row = mysqli_fetch_array($result)){
-                    $postid = $row['id'];
-                    $title = $row['title'];
-                    $content = $row['content'];
-                    $link = $row['link'];
 
-                    // User rating
-                    $query = "SELECT * FROM post_rating WHERE postid=".$postid." and userid=".$userid;
-                    $userresult = mysqli_query($con,$query) or die(mysqli_error());
-                    $fetchRating = mysqli_fetch_array($userresult);
-                    $rating = $fetchRating['rating'];
 
-                    // get average
-                    $query = "SELECT ROUND(AVG(rating),1) as averageRating FROM post_rating WHERE postid=".$postid;
-                    $avgresult = mysqli_query($con,$query) or die(mysqli_error());
-                    $fetchAverage = mysqli_fetch_array($avgresult);
-                    $averageRating = $fetchAverage['averageRating'];
 
-                    if($averageRating <= 0){
-                        $averageRating = "No rating yet.";
-                    }
-            ?>
-                    <div class="post">
-                        
-                        <div class="post-action">
-                            <!-- Rating -->
-                            <select class='rating' id='rating_<?php echo $postid; ?>' data-id='rating_<?php echo $postid; ?>'>
-                                <option value="1" >1</option>
-                                <option value="2" >2</option>
-                                <option value="3" >3</option>
-                                <option value="4" >4</option>
-                                <option value="5" >5</option>
-                            </select>
-                            <div style='clear: both;'></div>
-                            Average Rating : <span id='avgrating_<?php echo $postid; ?>'><?php echo $averageRating; ?></span>
-
-                            <!-- Set rating -->
-                            <script type='text/javascript'>
-                            $(document).ready(function(){
-                                $('#rating_<?php echo $postid; ?>').barrating('set',<?php echo $rating; ?>);
-                            });
-                            
-                            </script>
-                        </div>
-                    </div>
-            <?php
-                }
-            ?>
-
-        </div>
+     
 <footer>
 
  

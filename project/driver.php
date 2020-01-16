@@ -158,7 +158,7 @@ transform: scale(1.15);
     </li>
  
      <li class="nav-item">
-      <a class="nav-link" href="driver.php">Driver</a>
+      <a class="nav-link active" href="driver.php">Driver</a>
     </li>
   
      <li class="nav-item">
