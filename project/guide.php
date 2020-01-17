@@ -150,7 +150,7 @@ transform: scale(1.15);
     </li>
     
     <li class="nav-item">
-      <a class="nav-link active" href="guide.php">Guide</a>
+      <a class="nav-link" href="guide.php">Guide</a>
     </li>
 
      <li class="nav-item">

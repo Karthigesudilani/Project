@@ -52,7 +52,8 @@ if(isset($_GET["action"]))
 	}
 }
 
-?><HTML lang="en">
+?>
+<HTML lang="en">
 <HEAD>
   <TITLE>
   Tourists Transportation and Guiding Management System for a Travel Agency In Badulla  
@@ -172,9 +173,7 @@ transform: scale(1.15);
 </HEAD>
 
 <BODY>
-<div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;">
+
 <div style="background-color: Gray; color: black; font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
@@ -195,7 +194,7 @@ transform: scale(1.15);
     </li>
 
     <li class="nav-item">
-      <a class="nav-link active" href="Transportation.php">Transport</a>
+      <a class="nav-link" href="Transportation.php">Transport</a>
     </li>
         
 
@@ -272,8 +271,8 @@ transform: scale(1.15);
 </div>
      
 <center>
-<div style="background-color: #E0E6F8; width: 80% ">
-  <h1> <u>Transport</u> </h1>
+<div style="width: 80% ">
+  <h1 style="color:thistle"> <u>Transport</u> </h1>
           <div class="col-sm-12">
             <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST"> 
                 <table><tr><td>
@@ -304,6 +303,8 @@ transform: scale(1.15);
 
 
           </div>
+		  <div class="container"><br><br>
+		  <br>
 <?php
 				$query = "SELECT * FROM addtocart ORDER BY id ASC";
 				$result = mysqli_query($connect, $query);
@@ -314,14 +315,14 @@ transform: scale(1.15);
 				?>
 				<div class="col-md-4">
 				<form method="post" action="Transportation.php?action=add&id=<?php echo $row["id"]; ?>">
-					<div style="border:3px solid #5cb85c; background-color:whitesmoke; border-radius:5px; padding:16px;" align="center">
+					<div style="border:3px solid black; background-color:#94b998; border-radius:5px; padding:16px;" align="center" >
 						<img src="img/<?php echo $row["image"]; ?>" class="img-responsive" /><br />
 
 						<h4 class="text-info"><?php echo $row["name"]; ?></h4>
 
 						<h4 class="text-danger">$ <?php echo $row["price"]; ?></h4>
 
-						<input type="text" name="quantity" value="1" class="form-control" />
+						
 
 						<input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
 
@@ -338,15 +339,17 @@ transform: scale(1.15);
 			?>
 			<div style="clear:both"></div>
 			<br />
-			<h3>Order Details</h3>
+			<h3 style="color:black">Order Details</h3>
+			<body style="background-color:black;">
 			<div class="table-responsive">
-				<table class="table table-bordered">
+	
+				<table class="table table-bordered";>
 					<tr>
-						<th width="40%">Item Name</th>
+						<th width="40%" style="color:white" >Item Name</th>
 						
-						<th width="20%">Price</th>
-						<th width="15%">Total</th>
-						<th width="5%">Action</th>
+						<th width="20%" style="color:white" >Price</th>
+						<th width="15%" style="color:white" >Total</th>
+						<th width="5%" style="color:white" >Action</th>
 					</tr>
 					<?php
 					if(!empty($_SESSION["shopping_cart"]))
@@ -356,26 +359,26 @@ transform: scale(1.15);
 						{
 					?>
 					<tr>
-						<td><?php echo $values["item_name"]; ?></td>
+						<td style="color:white"><?php echo $values["item_name"]; ?></td>
 						
-						<td>$ <?php echo $values["item_price"]; ?></td>
-						<td></td>
-						<td><a href="Transportation.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
+						<td style="color:white">$ <?php echo $values["item_price"]; ?></td>
+						<td style="color:white"></td>
+						<td><a href="Transportation.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger" >Remove</span></a></td>
 					</tr>
 					<?php
 							$total = $total + ($values["item_price"]);
 						}
 					?>
 					<tr>
-						<td colspan="2" align="right">Total</td>
-						<td align="right">$ <?php echo number_format($total, 2); ?></td>
+						<td colspan="2" align="right" style="color:white">Total</td>
+						<td align="right" style="color:white">$ <?php echo number_format($total, 2); ?></td>
 						<td> </td>
 						
 					</tr>
 					<?php
 					}
 					?>
-						
+					</body>	
 				</table>
 			</div>
           <!--end search bar-->                                 
@@ -386,16 +389,16 @@ transform: scale(1.15);
       </div>                </div></b></h5></center></div>
 
 </div>
-<div class="text-right">
-  
-    <a href="driver.php"><button type="button" class="btn btn-success">Driver</button> </a>
+
+  <center>
+    <a href="driver.php"><button type="button" class="btn btn-success" >Driver</button> </a>
          <a href="guide.php"> <button type="button" class="btn btn-success">Guide</button>  </a>         
            <a href = "CheckOutForm.php"> <button type="button" class="btn btn-success">Check Out</button></a>
                     </div></center>
  <br />   </div>
 </div>
 
-</b></h5></center></div>
+</b></h5></div>
 
 
 

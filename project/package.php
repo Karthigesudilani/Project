@@ -166,7 +166,7 @@ transform: scale(1.15);
     </li>
     
      <li class="nav-item">
-      <a class="nav-link active" href="package.php">Package</a>
+      <a class="nav-link" href="package.php">Package</a>
     </li>
    
      <li class="nav-item">

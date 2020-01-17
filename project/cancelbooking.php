@@ -192,7 +192,7 @@ transform: scale(1.15);
     </li>
    
  <li class="nav-item" >
-      <a class="nav-link active" href="cancelbooking.php">Cancel Booking</a>
+      <a class="nav-link" href="cancelbooking.php">Cancel Booking</a>
     </li>
 
      <li class="nav-item">
