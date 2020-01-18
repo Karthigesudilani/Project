@@ -6,7 +6,7 @@
 
         try{
           $conn = mysqli_connect($servername, $username, $password, $dbname);
-          echo("successful in connection");
+          
         }
 
         catch(MySQLi_Sql_Exception $ex){
@@ -27,20 +27,7 @@
           try{
             $register_result = mysqli_query($conn, $register_query);
             if(mysqli_affected_rows($conn)>0){
-              echo"<script>alert('Booking successful');</script>";
-
-$to = 'karthigesudilani21@gmail.com';
-$subject = 'Marriage Proposal';
-$message = 'Hi Jane, will you marry me?'; 
-$from = 'sandunipiyumikagw@gmail.com';
- 
-// Sending email
-if(mail($to, $subject, $message)){
-    echo 'Your mail has been sent successfully.';
-} else{
-    echo 'Unable to send email. Please try again.';
-}
-
+              
               header("location:./Home.php");
             }
             else{

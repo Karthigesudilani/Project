@@ -175,7 +175,7 @@ transform: scale(1.15);
   
     
     <li class="nav-item">
-      <a class="nav-link" href="places.php">Tourist Attraction Places</a>
+      <a class="nav-link active" href="places.php">Tourist Attraction Places</a>
     </li>
   
     <li class="nav-item">

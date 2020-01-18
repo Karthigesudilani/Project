@@ -10,6 +10,7 @@ $res= mysqli_query($con,"INSERT into comments VALUES('','$name','$comment')");
 
 if($res){
 	echo "<script>alert('Successfully Comment');</script>";
+	header("location:../about.php");
 }
 else{
 	echo "<script>alert('Try Again');</script>";

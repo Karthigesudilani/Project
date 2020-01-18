@@ -1,3 +1,60 @@
+<?php 
+
+session_start();
+$connect = mysqli_connect("localhost", "root", "", "ttgms");
+
+if(isset($_POST["add_to_cart"]))
+{
+  if(isset($_SESSION["guide"]))
+  {
+    $item_array_id = array_column($_SESSION["guide"], "guideId");
+    if(!in_array($_GET["id"], $item_array_id))
+    {
+      $count = count($_SESSION["guide"]);
+      $item_array = array(
+        'guideId'     =>  $_GET["id"],
+        'gName '     =>  $_POST["hidden_name"],
+        'language'=> $_POST["hidden_language"],
+        'fees'    =>  $_POST["hidden_price"],
+        
+      );
+      $_SESSION["guide"][$count] = $item_array;
+    }
+    else
+    {
+      echo '<script>alert("Item Already Added")</script>';
+    }
+  }
+  else
+  {
+    $item_array = array(
+      'guideId'     =>  $_GET["id"],
+        'gName '     =>  $_POST["hidden_name"],
+        'language'=> $_POST["hidden_language"],
+        'fees'    =>  $_POST["hidden_price"],
+        
+    );
+    $_SESSION["guide"][0] = $item_array;
+  }
+}
+
+if(isset($_GET["action"]))
+{
+  if($_GET["action"] == "delete")
+  {
+    foreach($_SESSION["guide"] as $keys => $values)
+    {
+      if($values["guideId"] == $_GET["id"])
+      {
+        unset($_SESSION["guide"][$keys]);
+        echo '<script>alert("Item Removed")</script>';
+        echo '<script>window.location="guide.php"</script>';
+      }
+    }
+  }
+}
+
+?>
 <HTML lang="en">
 <HEAD>
   <TITLE>
@@ -116,12 +173,11 @@ transform: scale(1.15);
 
 </style>
 </HEAD>
-
 <BODY>
 <div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;">
-<div style="background-color: Gray;font-style:italic;">
+<div style="background-color: Gray; color: black; font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
 
@@ -150,7 +206,7 @@ transform: scale(1.15);
     </li>
     
     <li class="nav-item">
-      <a class="nav-link" href="guide.php">Guide</a>
+      <a class="nav-link active" href="guide.php">Guide</a>
     </li>
 
      <li class="nav-item">
@@ -200,7 +256,7 @@ transform: scale(1.15);
     </li>
 
    <li class="nav-item" >
-      <a class="nav-link" href=""><img src="img\add.png" /></a>
+      <a class="nav-link" href="shopping.php"><img src="img\add.png" /></a>
     </li>
  <li class="nav-item">
       <a class="nav-link" href=""></a>
@@ -209,7 +265,7 @@ transform: scale(1.15);
       <a class="nav-link" href=""></a>
     </li>
     <li class="nav-item" >
-  <a class="nav-link" href=""><img src="img\log.png" /></a>
+  <a class="nav-link" href="login.php"><img src="img\log.png" /></a>
     </li>
     
     </li>
@@ -219,118 +275,48 @@ transform: scale(1.15);
 <center>
 <div style="background-color: #E0E6F8; width: 80% ">
   <h1> <u>Guide</u> </h1>
-          <div class="col-sm-12">
-            <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST"> 
-                <table><tr><td>
-           
-                  <input style="border-color:grey;" class="form-control"  name="keyname" type="text" placeholder="Name" id="meal_name">
-                  
-           </td><td>
-                
-                  <input style="padding-top:5px;" class="btn btn-dark" type="submit" value="Search" name="submit">
-                  
-              </td>
-                
-                <td>
-                
-                  <input style="padding-top:5px;" class="btn btn-dark" type="submit" value="Veiw" name="submit">
-                  
-              </td>
-
-
-              </form>
-            <td>
-          </div>       
-          <br />             
-          
-<div class="text-right">
-   <a class="nav-link" href="new_guide.php"><button type="button" class="btn btn-primary">New Guide Application</button></a>
-</div>
-        </center>
-        </div>
-</div>                 </td></tr></table>       
-          </div>
-
-
-                      
+                               
           <div id="result">
             
 
 
-          </div>                    
-          <!--end search bar-->                                 
-            <div class="row  w3-margin" >
-              <div class ="container">
-              <table class="table table-striped table-bordered" id="example" style="width: 95%;">
-                <thead>
-                  <tr>
-                    <th>Guide ID</th>
-                    <th>Guide Name</th>
-                    <th>Language</th>
-                    
-                    <th>Guide Qualification</th>
-                   
-                    <th>Image</th>
-                    <th></th>   
-                  </tr>
+          </div>
+<?php
+        $query = "SELECT * FROM guide";
+        $result = mysqli_query($connect, $query);
+        if(mysqli_num_rows($result) > 0)
+        {
+          while($row = mysqli_fetch_array($result))
+          {
+        ?>
+        <div class="col-md-4">
+        <form method="post" action="guide.php?action=add&id=<?php echo $row["guideId"]; ?>">
+          <div  style="border:3px solid #5cb85c; background-color:whitesmoke; border-radius:5px; padding:16px;" align="center">
+            <img src="in\upload\<?php echo $row["Image"]; ?>" class="img-responsive" /><br />
 
-                    <?php 
-                      if(isset($_POST["submit"])) {
-$dbServername ="localhost";
-$dbUsername ="root";
-$dbPassword ="";
-$dbName ="ttgms";
+            <h4 class="text-info"><?php echo $row["gName"]; ?><br>Rs<?php echo $row["fees"]; ?>  Per Hour
+              <br>Language :- <?php echo $row["language"]; ?> </h4>          
 
-$conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
+            <input type="hidden" name="hidden_name" value="<?php echo $row["gName"]; ?>" />
 
-                        $sql = "SELECT * FROM guide WHERE gName LIKE '%{$_POST["keyname"]}%' OR Language LIKE '%{$_POST["keyname"]}%'";
+            <input type="hidden" name="hidden_price" value="<?php echo $row["fees"]; ?>" />
+<input type="hidden" name="hidden_language" value="<?php echo $row["language"]; ?>" />
 
-                      $result = $conn -> query($sql);
+            <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
 
-          
-                      if ($result->num_rows>0 ) {
-
-
-                        $i=0;
-
-
-                        while($row = $result->fetch_assoc()) {
-                            $i++;
-
-                          echo "<tr>";
-                              echo "<td>"; echo $row['guideId'];  echo "</td>";
-                              echo "<td>"; echo $row['gName'];  echo "</td>";
-                              echo "<td>"; echo $row['language'];  echo "</td>";
-                             
-                              echo "<td>"; echo $row['gqualification'];  echo "</td>";
-                             
-                              echo "<td>"; echo "<img src=includes/upload/".$row['Image'].">"; echo "</td>";
-                              echo "<td>";
-                              echo "<button type='button' class='btn btn-danger'> <a style='color:white;text-decoration:none;'href='add_guide_delete.php?id={$row["guideId"]}'>Add to cart</a></button>";
-                              echo "</td>";
-                              echo "</tr>";
-                            }
-
-
-                      }
-
-
-                        }
-
-
-
-
-
-
-                      
-                    ?>
-                </thead>
-              </table>
+          </div>
+        </form>
+      </div>
+      <?php
+          }
+        }
+      ?>
+                <!--end search bar-->                                 
+           
+      
             </div>  
         </div>
       </div>                </div></b></h5></center></div>
-
-</div>
 
 
 <div class="text-right">

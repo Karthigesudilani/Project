@@ -116,12 +116,11 @@ transform: scale(1.15);
 
 </style>
 </HEAD>
-
 <BODY>
 <div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;">
-<div style="background-color: Gray;font-style:italic;">
+<div style="background-color: Gray; color: black; font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
 
@@ -158,7 +157,7 @@ transform: scale(1.15);
     </li>
  
      <li class="nav-item">
-      <a class="nav-link" href="driver.php">Driver</a>
+      <a class="nav-link active" href="driver.php">Driver</a>
     </li>
   
      <li class="nav-item">
@@ -200,7 +199,7 @@ transform: scale(1.15);
     </li>
 
    <li class="nav-item" >
-      <a class="nav-link" href=""><img src="img\add.png" /></a>
+      <a class="nav-link" href="shopping.php"><img src="img\add.png" /></a>
     </li>
  <li class="nav-item">
       <a class="nav-link" href=""></a>
@@ -209,7 +208,7 @@ transform: scale(1.15);
       <a class="nav-link" href=""></a>
     </li>
     <li class="nav-item" >
-  <a class="nav-link" href=""><img src="img\log.png" /></a>
+  <a class="nav-link" href="login.php"><img src="img\log.png" /></a>
     </li>
     
     </li>
@@ -222,54 +221,75 @@ transform: scale(1.15);
     width: 60%;
     padding: 10px;">
     <div class="col-15">
-              <?php
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "ttgms";
+  <script>
 
-        try{
-          $conn = mysqli_connect($servername, $username, $password, $dbname);
-          
-        }
+  function checkForm(form)
+  {
 
-        catch(MySQLi_Sql_Exception $ex){
-          echo("error in connection");
-        }
+      re = /[0-9]/;
+      if(re.test(form.nDriverFname.value)) {
+        alert("Error: Invalid Firstname !");
+        form.nDriverFname.focus();
+        return false;
+      }
+ 
+        re = /^\w+$/;
+      if(!re.test(form.nDriverFname.value)) {
+        alert("Error: Invalid Firstname !");
+        form.nDriverFname.focus();
+        return false;
+      }
 
-        if(isset($_POST['register1'])){
-          $nDriverFname = $_POST['nDriverFname']; 
-          $nDriverLname = $_POST['nDriverLname']; 
-          $nDnic = $_POST['nDnic']; 
-          $nDdob = $_POST['nDdob']; 
-          $nDcontactNo = $_POST['nDcontactNo']; 
-          $nDmail = $_POST['nDmail']; 
-          $nDaddress = $_POST['nDaddress'];
-          $nDcv = $_POST['nDcv'];
-          
-          
-          $register1_query = "INSERT INTO `newdriver`(`nDriverFname`, `nDriverLname`, `nDnic`, `nDdob`, `nDcontactNo`, `nDmail`,`nDaddress`,`nDcv`) VALUES ('$nDriverFname', '$nDriverLname', '$nDnic', '$nDdob', '$nDcontactNo', '$nDmail','nDaddress','nDcv')";
 
-          try{
-            $register1_result = mysqli_query($conn, $register1_query);
-            if(mysqli_affected_rows($conn)>0){
-   echo"<script>alert('registration Successfully');</script>";
-            }
-            else{
-             
-            echo"<script>alert('error in registration');</script>";
-            }
-            
-          }
-          catch(Exception $ex){
-            echo("error".$ex->getMessage());
-          }
-          }
+      re = /[0-9]/;
+      if(re.test(form.nDriverLname.value)) {
+        alert("Error: Invalid lastname !");
+        form.nDriverLname.focus();
+        return false;
+      }
+ 
+       re = /^\w+$/;
+      if(!re.test(form.nDriverLname.value)) {
+        alert("Error: Invalid lastname !");
+        form.nDriverLname.focus();
+        return false;
+      }
 
-        ?>
+      re = /[a-z]/;
+      if(re.test(form.nDcontactNo.value)) {
+        alert("Error: Invalid Phone Number!");
+        form.nDcontactNo.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(re.test(form.nDcontactNo.value)) {
+        alert("Error: Invalid Phone Number!");
+        form.nDcontactNo.focus();
+        return false;
+      }
+    re = /^\w+$/;
+      if(!re.test(form.nDcontactNo.value)) {
+        alert("Error: Invalid Phone Number!");
+        form.nDcontactNo.focus();
+        return false;
+      }
+         if(form.nDcontactNo.value != "") {
+      if(form.nDcontactNo.value.length =< 9) {
+        alert("Error: Phone number must contain at Ten characters!");
+        form.nDcontactNo.focus();
+        return false;
+      }
+       if(form.nDcontactNo.value.length > 11) {
+        alert("Error: Phone number must contain at Ten characters!");
+        form.nDcontactNo.focus();
+        return false;
+      }
+  }
+}
+</script>
                     
               <div class="thumbnail" style="width:100%";>
-      <form class="form-horizontal w3-left w3-border w3-light-gray" id="register-form1" method="post" action="./new_driverBack.php" style="background-color: #E0ECF8;">
+      <form ... onsubmit="return checkForm(this);" class="form-horizontal w3-left w3-border w3-light-gray" id="register-form1" method="post" action="./in/new_driverBack.php" style="background-color: #E0ECF8;">
     <center><div class="col-md-12 col-sm-12 alert-info"><br><h3>New Drivers Application</h3> </div></center>
 
 <div class="col-15">
@@ -294,7 +314,8 @@ transform: scale(1.15);
 
                         <div class="col-lg-30">
                         <div class="input-group">
-                            <span style="color:gray">DOB:- </span><input id="nDdob" type="text" class="form-control" name="nDdob" placeholder="DOB" required autofocus> </div></div><br>
+                            <span style="color:gray">DOB:- </span>
+                            <input id="nDdob" type="text" class="input-group date form-control" date= "" data-date-format="yyyy-mm-dd" name="nDdob" placeholder="DOB" required autofocus> </div></div><br>
 
                         <div class="col-lg-30">
                         <div class="input-group">

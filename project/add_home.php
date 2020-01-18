@@ -1,3 +1,4 @@
+
 <HTML lang="en">
 <HEAD>
 	<TITLE>
@@ -18,23 +19,23 @@
 
 			<style>
 
-			* {
-    			box-sizing: border-box;
-				}
-	
+      * {
+          box-sizing: border-box;
+        }
+  
 @media screen and(min-width:600px ){
-	#image{
-			flex:50%;
-			max-width: 50%;
-			}
-	}
+  #image{
+      flex:50%;
+      max-width: 50%;
+      }
+  }
 
 @media screen and(max-width:800px ){
-	#image{
-			flex:100%;
-			max-width: 100%;
-			}
-	}
+  #image{
+      flex:100%;
+      max-width: 100%;
+      }
+  }
 
 .div1 {
     display: flex;
@@ -47,8 +48,8 @@
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
-	background-color :black;
-	flex-wrap: nowrap;
+  background-color :black;
+  flex-wrap: nowrap;
 }
 
 .img:hover{
@@ -109,23 +110,23 @@ transform: scale(1.15);
  
                 color: #000000;
  
-}
 
+
+ 
 
  
 
 </style>
 </HEAD>
 
-<BODY>
-<div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;">
-<div style="background-color: Gray;font-style:italic;">
-  <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
-</h5></center></div>
 
-<!--Nav Bar-->	
+<BODY>
+
+<div style=" color: black; font-style:italic;">
+  <center><h3><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
+</h3></center></div>
+
+<!--Nav Bar-->  
 <div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
@@ -133,7 +134,7 @@ transform: scale(1.15);
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="Home.php">Home</a>
+      <a class="nav-link" href="add_home.php">Home</a>
     </li>
  
      <li class="nav-item">
@@ -166,25 +167,23 @@ transform: scale(1.15);
     </li>
     
      <li class="nav-item">
-      <a class="nav-link" href="package.php">Package</a>
+      <a class="nav-link" href="add_package.php">Package</a>
     </li>
    
      <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
-  
-    
-    <li class="nav-item">
-      <a class="nav-link" href="places.php">Tourist Attraction Places</a>
+  <li class="nav-item">
+      <a class="nav-link" href="add_newguide.php">New_Guide</a>
     </li>
-  
+    
     <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
     
     
       <li class="nav-item">
-      <a class="nav-link" href="about.php">About Us</a>
+      <a class="nav-link" href="add_newdriver.php">New_Driver</a>
     </li>
 
      <li class="nav-item">
@@ -217,6 +216,11 @@ transform: scale(1.15);
 </nav>
 </div>
 
+    </div>
+<div style = "background-image:url('new2.jpg');  background-repeat: no-repeat;
+
+  background-attachment: scroll;  
+  background-size: 100%50%;">
     <!--HOME SECTION-->
      
  
@@ -233,6 +237,11 @@ transform: scale(1.15);
         <br />
          <br />
         <br />
+		 
+		 <h1 style="color:cornsilk; font-family:Arial">
+		<center>
+			WELCOME TO BADULLA
+		</center>	</h1> 
          <br />
           <br />
            <br /> <br />
@@ -240,31 +249,24 @@ transform: scale(1.15);
              <br />
               <br />
                <br />
-<div class="carousel-caption ">
-  <div class="text-left">
-<a class="nav-link" href="Transportation.php"><img src="img\car.jpg" alt=""  style="height: '10px'; width: 20%; margin: 10px; border: 5px solid #03B875;" /></a></div>
-<div class="text-center">
-<a class="nav-link" href="driver.php"><img src="img\driver.jpg" alt="" style="height: '10px'; width: 20%; margin: 10px; border: 5px solid #03B875;" /></a></div>
-<div class="text-right">
- <a class="nav-link" href="guide.php"><img src="img\guide.jpg" alt="" style="height: 30%; width: 20%; margin: 10px; border: 5px solid #03B875;" /></a></div>
-                            </div>
-                        </div>
-                    </div>
-                  
-    <!--SERVICES SECTION-->
-          <section  id="services-sec">
-        <div class="container">
-            <div class="row ">
-                <div class="text-center">
-                	<center><div class="col-md-4 col-sm-4 alert-info"><br />
-                            <h3> Our Services</h3>
+				 <br />
+					<br />
+				  <br />
+				   <br />
+			   <br />
+				 <br />
+					<br />
+				  <br />
+				   <br />
+               
+                            <h3 class="full-width" style="color:black"> <div class="wrap">Our Service</div></h3>
                            
-                    </div></center>
+                    </center>
                 	<table>
                 		<tr>
-                			<td>
-                    <div class="col-md-11 col-sm-11 alert-success">
-                            <h4>Transport</h4>
+                			<td style="padding:30px">
+                    <div class="col-md-11 col-sm- alert-success">
+                            <h4 style="color:black">Transport</h4>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
@@ -273,9 +275,9 @@ transform: scale(1.15);
                             
                     </div>
                 </td>
-                <td>
+                <td style="padding:30px">
                     <div class="col-md-11 col-sm-11 alert-success">
-                            <h4> Guide </h4>
+                            <h4 style="color:black"> Guide </h4>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
@@ -286,9 +288,9 @@ transform: scale(1.15);
                    </td>
                </tr>
                <tr>
-                			<td>
+                			<td style="padding:30px">
                     <div class="col-md-11 col-sm-11 alert-success">
-                            <h4>Driver</h4>
+                            <h4 style="color:black">Driver</h4>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
@@ -297,9 +299,9 @@ transform: scale(1.15);
                             
                     </div>
                 </td>
-                <td>
+                <td style="padding:30px">
                     <div class="col-md-11 col-sm-11 alert-success">
-                            <h4>Provide Places Information </h4>
+                            <h4 style="color:black">Provide Places Information </h4>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
@@ -312,74 +314,13 @@ transform: scale(1.15);
 </table></div></div></div>
 <br />
 <br />                
-          	<div class="text-center">
-                	<center><div class="col-md-4 col-sm-4 alert-info">
-                          <br />  <h3> Transport</h3>
-                           
-                    </div></center>
-           <div class="div1">
-		<div class="image">
-<div class="img"><img src="img\car.jpg" width="100%" ></div>
-</div><div class="image">
-<div class="img"><img src="img\car.jpg" width="100%" ></div>
-</div><div class="image">
-<div class="img"><img src="img\car.jpg" width="100%" ></div>
-</div><div class="image">
-<div class="img"><img src="img\car.jpg" width="100%"></div>
-</div></div>
-<div class="text-right">
-
-  <a class="nav-link" href="Transportation.php"><button type="button" class="btn btn-success" style="align-items: right;">Get Start Booking For Transport</button></a>
-
-                    </div></center>
-    </div>
-
-                  
+	
+                    </center>
+                
+                </div></div></div>
 <br />
-<br />
-          	 <div class="text-center">
-                	<center><div class="col-md-4 col-sm-4 alert-info">
-                            <br /><h3> Driver</h3>
-                           
-                    </div></center>
-           <div class="div1">
-		<div class="image">
-<div class="img"><img src="img\driver.jpg" width="100%" ></div>
-</div><div class="image">
-<div class="img"><img src="img\driver.jpg" width="100%" ></div>
-</div><div class="image">
-<div class="img"><img src="img\driver.jpg" width="100%" ></div>
-</div><div class="image">
-<div class="img"><img src="img\driver.jpg" width="100%"></div>
-</div></div>
-<div class="text-right">
-  <a class="nav-link" href="driver.php"><button type="button" class="btn btn-success" style="align-items: right;">Get Start Booking For Driver</button></a>
- </div>   
-
-</div> 
-      <br />
-      <br />   
-         	<center><div class="col-md-4 col-sm-4 alert-info">
-                         <br />   <h3> Guide</h3>
-                           
-                    </div></center>
-           <div class="div1">
-		<div class="image">
-<div class="img"><img src="img\guide.jpg" width="100%" ></div>
-</div><div class="image">
-<div class="img"><img src="img\guide.jpg" width="100%" ></div>
-</div><div class="image">
-<div class="img"><img src="img\guide.jpg" width="100%" ></div>
-</div><div class="image">
-<div class="img"><img src="img\guide.jpg" width="100%"></div>
-</div></div>
-<div class="text-right">
-   <a class="nav-link" href="guide.php"><button type="button" class="btn btn-success" style="align-items: right;">Get Start Booking For Guide</button></a> </div>
-<br />
-<br /></div>
-      
-
-
+<br />                   
+          
 <footer>
 
  

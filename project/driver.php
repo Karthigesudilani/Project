@@ -1,3 +1,58 @@
+<?php 
+
+session_start();
+$connect = mysqli_connect("localhost", "root", "", "ttgms");
+
+if(isset($_POST["add_to_cart"]))
+{
+  if(isset($_SESSION["driver"]))
+  {
+    $item_array_id = array_column($_SESSION["driver"], "driverId");
+    if(!in_array($_GET["id"], $item_array_id))
+    {
+      $count = count($_SESSION["driver"]);
+      $item_array = array(
+        'driverId'     =>  $_GET["id"],
+        'dName '     =>  $_POST["hidden_name"],
+        'fees'    =>  $_POST["hidden_price"],
+        
+      );
+      $_SESSION["driver"][$count] = $item_array;
+    }
+    else
+    {
+      echo '<script>alert("Item Already Added")</script>';
+    }
+  }
+  else
+  {
+    $item_array = array(
+      'driverId'     =>  $_GET["id"],
+        'dName '     =>  $_POST["hidden_name"],
+        'fees'    =>  $_POST["hidden_price"],
+        
+    );
+    $_SESSION["driver"][0] = $item_array;
+  }
+}
+
+if(isset($_GET["action"]))
+{
+  if($_GET["action"] == "delete")
+  {
+    foreach($_SESSION["driver"] as $keys => $values)
+    {
+      if($values["driverId"] == $_GET["id"])
+      {
+        unset($_SESSION["driver"][$keys]);
+        echo '<script>alert("Item Removed")</script>';
+        echo '<script>window.location="driver.php"</script>';
+      }
+    }
+  }
+}
+
+?>
 <HTML lang="en">
 <HEAD>
   <TITLE>
@@ -116,12 +171,11 @@ transform: scale(1.15);
 
 </style>
 </HEAD>
-
 <BODY>
 <div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;">
-<div style="background-color: Gray;font-style:italic;">
+<div style="background-color: Gray; color: black; font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
 
@@ -158,7 +212,7 @@ transform: scale(1.15);
     </li>
  
      <li class="nav-item">
-      <a class="nav-link" href="driver.php">Driver</a>
+      <a class="nav-link  active" href="driver.php">Driver</a>
     </li>
   
      <li class="nav-item">
@@ -200,7 +254,7 @@ transform: scale(1.15);
     </li>
 
    <li class="nav-item" >
-      <a class="nav-link" href=""><img src="img\add.png" /></a>
+      <a class="nav-link" href="shopping.php"><img src="img\add.png" /></a>
     </li>
  <li class="nav-item">
       <a class="nav-link" href=""></a>
@@ -209,7 +263,7 @@ transform: scale(1.15);
       <a class="nav-link" href=""></a>
     </li>
     <li class="nav-item" >
-  <a class="nav-link" href=""><img src="img\log.png" /></a>
+  <a class="nav-link" href="login.php"><img src="img\log.png" /></a>
     </li>
     
     </li>
@@ -223,114 +277,39 @@ transform: scale(1.15);
                            
                     </div>
         
+<?php
+        $query = "SELECT * FROM driver";
+        $result = mysqli_query($connect, $query);
+        if(mysqli_num_rows($result) > 0)
+        {
+          while($row = mysqli_fetch_array($result))
+          {
+        ?>
+        <div class="col-md-4">
+        <form method="post" action="driver.php?action=add&id=<?php echo $row["driverId"]; ?>">
+          <div  style="border:3px solid #5cb85c; background-color:whitesmoke; border-radius:5px; padding:16px;" align="center">
+            <img src="in\upload\<?php echo $row["Image"]; ?>" class="img-responsive" /><br />
 
-<div class="col-sm-12">
-            <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST"> 
-                <table><tr><td>
+            <h4 class="text-info"><?php echo $row["dName"]; ?><br>Rs<?php echo $row["fees"]; ?>  Per Hour
+                   
+
+            <input type="hidden" name="hidden_name" value="<?php echo $row["dName"]; ?>" />
+
+            <input type="hidden" name="hidden_price" value="<?php echo $row["fees"]; ?>" />
+
+
+            <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
+
+          </div>
+        </form>
+      </div>
+      <?php
+          }
+        }
+      ?>
+                <!--end search bar-->                                 
            
-                  <input style="border-color:grey;" class="form-control"  name="keyname" type="text" placeholder="Name" id="meal_name">
-                  
-           </td><td>
-                
-                  <input style="padding-top:5px;" class="btn btn-dark" type="submit" value="Search" name="submit">
-                  
-              </td>
-                
-                <td>
-                
-                  <input style="padding-top:5px;" class="btn btn-dark" type="submit" value="Veiw" name="submit">
-                  
-              </td>
-
-
-              </form>
-            <td>
-          </div>       
-          <br />             
-          <div class="text-right">
-   <a class="nav-link" href="new_driver.php"><button type="button" class="btn btn-primary">New Driver Application</button></a>
-</div>
-        </center>
-        </div>
-</div>
-</td></tr></table>
-                      
-          <div id="result">
-            
-
-
-          </div>                    
-          <!--end search bar-->                                 
-            <div class="row  w3-margin" >
-              <div class ="container">
-              <table class="table table-striped table-bordered" id="example" style="width: 95%;">
-                <thead>
-                  <tr>
-                    <th>Driver ID</th>
-                    <th>Driver Name</th>
-                    
-                    <th>Driver Qualification</th>
-                    
-                    <th>Image</th>
-                    <th></th>   
-                  </tr>
-
-                    <?php 
-                      if(isset($_POST["submit"])) {
-$dbServername ="localhost";
-$dbUsername ="root";
-$dbPassword ="";
-$dbName ="ttgms";
-
-$conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
-
-                        $sql = "SELECT * FROM driver WHERE dName LIKE '%{$_POST["keyname"]}%' OR driverId LIKE '%{$_POST["keyname"]}%'";
-
-                      $result = $conn -> query($sql);
-
-          
-                      if ($result->num_rows>0 ) {
-
-
-                        $i=0;
-
-
-                        while($row = $result->fetch_assoc()) {
-                            $i++;
-
-                          echo "<tr>";
-                              echo "<td>"; echo $row['driverId'];  echo "</td>";
-                              echo "<td>"; echo $row['dName'];  echo "</td>";
-                              
-                              echo "<td>"; echo $row['dqualification'];  echo "</td>";
-                              echo "<td>"; echo "<img src=includes/upload/".$row['Image'].">"; echo "</td>";
-                              echo "<td>";
-                              echo "<button type='button' class='btn btn-danger'> <a style='color:white;text-decoration:none;'href='add_driver_delete.php?id={$row["driverId"]}'>Add to cart </a></button>";
-                              echo "</td>";
-                              echo "</tr>";
-                            }
-
-
-                      }
-
-
-                        }
-
-
-
-
-
-
-                      
-                    ?>
-                </thead>
-              </table>
-            </div>  
-        </div>
-      </div>                </div></b></h5></center></div>
-
-</div>
-
+      
 
 
 

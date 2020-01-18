@@ -125,7 +125,6 @@ transform: scale(1.15);
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
 
-<!--Nav Bar-->  
 <div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
@@ -133,7 +132,7 @@ transform: scale(1.15);
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="Home.php">Home</a>
+      <a class="nav-link" href="aa_home.php">Home</a>
     </li>
  
      <li class="nav-item">
@@ -166,25 +165,23 @@ transform: scale(1.15);
     </li>
     
      <li class="nav-item">
-      <a class="nav-link" href="package.php">Package</a>
+      <a class="nav-link" href="add_package.php">Package</a>
     </li>
    
      <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
-  
-    
-    <li class="nav-item">
-      <a class="nav-link" href="places.php">Tourist Attraction Places</a>
+  <li class="nav-item">
+      <a class="nav-link" href="add_newguide.php">New_Guide</a>
     </li>
-  
+    
     <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
     
     
       <li class="nav-item">
-      <a class="nav-link" href="about.php">About Us</a>
+      <a class="nav-link" href="add_newdriver.php">New_Driver</a>
     </li>
 
      <li class="nav-item">
@@ -215,12 +212,12 @@ transform: scale(1.15);
     </li>
   </ul>
 </nav>
+</div>
 <center>
 <div style="background-color: #E0E6F8; width: 60% "> <br><h1> Add a Guide</h1>    
                                     
 <form   id="add_meal" method="POST" action="addnew_guide_back.php" enctype="multipart/form-data">
-<div class="w3-half w3-padding">      
-    <input class="w3-input w3-border" name="guideId" type="text" placeholder="Guide ID"  id="guideId" value=""></div><br />
+
 <div class="w3-half w3-padding">      
     <input class="w3-input w3-border" name="gName" type="text" placeholder="Guide Name"  id="gName"></div><br />
 <div class="w3-padding">
@@ -255,6 +252,9 @@ transform: scale(1.15);
                                         
                        
                                                     </div>
+<div class="w3-padding">
+     <input class="w3-input w3-border" name="fees" type="text" placeholder="fees per hour"  id="fees"></div>               
+     <br />
 <div class="w3-row-padding w3-margin-bottom">   
 <div class="w3-half">
 <input type="submit" class="w3-btn w3-green w3-block " name="meal_add" value="Add Guide">

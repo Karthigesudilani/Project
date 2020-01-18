@@ -132,82 +132,7 @@ transform: scale(1.15);
   
   <!-- Links -->
   <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="Home.php">Home</a>
-    </li>
- 
-     <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="Transportation.php">Transport</a>
-    </li>
-        
-
-     <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link" href="guide.php">Guide</a>
-    </li>
-
-     <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
- 
-     <li class="nav-item">
-      <a class="nav-link" href="driver.php">Driver</a>
-    </li>
-  
-     <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
-    
-     <li class="nav-item">
-      <a class="nav-link" href="package.php">Package</a>
-    </li>
    
-     <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
-  
-    
-    <li class="nav-item">
-      <a class="nav-link" href="places.php">Tourist Attraction Places</a>
-    </li>
-  
-    <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
-    
-    
-      <li class="nav-item">
-      <a class="nav-link" href="about.php">About Us</a>
-    </li>
-
-     <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
-   
- <li class="nav-item" >
-      <a class="nav-link" href="cancelbooking.php">Cancel Booking</a>
-    </li>
-
-     <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
-
-   <li class="nav-item" >
-      <a class="nav-link" href=""><img src="img\add.png" /></a>
-    </li>
- <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
-     <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
     <li class="nav-item" >
   <a class="nav-link" href="Home.php">Log Out</a>
     </li>
@@ -226,7 +151,42 @@ transform: scale(1.15);
               <div class="thumbnail" class="col-45">
                       <center><b>
 <div class="container">
-                    <form class="form-horizontal w3-left w3-border w3-light-gray" id="register-form1" method="post" action="./leave_guideBack.php" style="background-color: #E0ECF8;">   <h1>Apply Leave</h1> </b>
+                    <script>
+
+  function checkForm(form)
+  {
+   
+    re = /^\w+$/;
+    if(!re.test(form.guideId.value)) {
+      alert("Error: Invalid guide ID!");
+      form.guideId.focus();
+      return false;
+    }
+
+re = /[a-z]/;
+      if(re.test(form.guideId.value)) {
+        alert("Error: Invalid guide ID!");
+        form.guideId.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(re.test(form.guideId.value)) {
+        alert("Error: Invalid guide ID!");
+        form.guideId.focus();
+        return false;
+      }
+      re = /[!,@,#,$,%,^,&,*,(,),_,+]/;
+      if(re.test(form.guideId.value)) {
+        alert("Error: Invalid guide ID!");
+        form.guideId.focus();
+        return false;
+      }
+  
+  }
+
+</script>
+
+                    <form ... onsubmit="return checkForm(this);" class="form-horizontal w3-left w3-border w3-light-gray" id="register-form1" method="post" action="./leave_guideBack.php" style="background-color: #E0ECF8;">   <h1>Apply Leave for guide</h1> </b>
                                                         <div class="col-lg-90">
                         <div class="input-group">
      <span class="input-group-addon" style="color:gray">Guide ID  :-    </span>

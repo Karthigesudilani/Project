@@ -118,14 +118,11 @@ transform: scale(1.15);
 </HEAD>
 
 <BODY>
-<div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;">
+
 <div style="background-color: Gray;font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
 
-<!--Nav Bar-->  
 <div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
@@ -133,7 +130,7 @@ transform: scale(1.15);
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="Home.php">Home</a>
+      <a class="nav-link" href="add_home.php">Home</a>
     </li>
  
      <li class="nav-item">
@@ -166,25 +163,23 @@ transform: scale(1.15);
     </li>
     
      <li class="nav-item">
-      <a class="nav-link" href="package.php">Package</a>
+      <a class="nav-link" href="add_package.php">Package</a>
     </li>
    
      <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
-  
-    
-    <li class="nav-item">
-      <a class="nav-link" href="places.php">Tourist Attraction Places</a>
+  <li class="nav-item">
+      <a class="nav-link" href="add_newguide.php">New_Guide</a>
     </li>
-  
+    
     <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
     
     
       <li class="nav-item">
-      <a class="nav-link" href="about.php">About Us</a>
+      <a class="nav-link" href="add_newdriver.php">New_Driver</a>
     </li>
 
      <li class="nav-item">
@@ -222,7 +217,7 @@ transform: scale(1.15);
  
 <br /><br />
 <center>
-<div style="background-color: #E0E6F8; width: 80% ">
+<div>
   <h1> <u>Driver</u> </h1>
           <div class="col-sm-12">
             <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST"> 
@@ -272,7 +267,7 @@ transform: scale(1.15);
                     <th>Driver Phone Number</th>
                     <th>Driver Age</th>
                     <th>Driver Qualification</th>
-                    <th>Driver Password</th>
+                    
                     <th>Image</th>
                     <th></th>   
                   </tr>
@@ -307,8 +302,8 @@ $conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
                               echo "<td>"; echo $row['dPhoneNo'];  echo "</td>";
                               echo "<td>"; echo $row['dAge'];  echo "</td>";
                               echo "<td>"; echo $row['dqualification'];  echo "</td>";
-                              echo "<td>"; echo $row['password'];  echo "</td>";
-                              echo "<td>"; echo "<img src=includes/upload/".$row['Image'].">"; echo "</td>";
+                              
+                              echo "<td>"; echo "<img src=in/upload/".$row['Image'].">"; echo "</td>";
                               echo "<td>";
                               echo "<button type='button' class='btn btn-danger'> <a style='color:white;text-decoration:none;'href='add_driver_delete.php?id={$row["driverId"]}'>Delete </a></button>";
                               echo "</td>";

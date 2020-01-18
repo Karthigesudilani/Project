@@ -116,12 +116,11 @@ transform: scale(1.15);
 
 </style>
 </HEAD>
-
 <BODY>
 <div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;">
-<div style="background-color: Gray;font-style:italic;">
+<div style="background-color: Gray; color: black; font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
 
@@ -150,7 +149,7 @@ transform: scale(1.15);
     </li>
     
     <li class="nav-item">
-      <a class="nav-link" href="guide.php">Guide</a>
+      <a class="nav-link active" href="guide.php">Guide</a>
     </li>
 
      <li class="nav-item">
@@ -200,7 +199,7 @@ transform: scale(1.15);
     </li>
 
    <li class="nav-item" >
-      <a class="nav-link" href=""><img src="img\add.png" /></a>
+      <a class="nav-link" href="shopping.php"><img src="img\add.png" /></a>
     </li>
  <li class="nav-item">
       <a class="nav-link" href=""></a>
@@ -209,7 +208,7 @@ transform: scale(1.15);
       <a class="nav-link" href=""></a>
     </li>
     <li class="nav-item" >
-  <a class="nav-link" href=""><img src="img\log.png" /></a>
+  <a class="nav-link" href="login.php"><img src="img\log.png" /></a>
     </li>
     
     </li>
@@ -221,56 +220,77 @@ transform: scale(1.15);
 <div class="container-fluid" style="box-shadow:3px 3px 3px 3px silver; margin: auto;
     width: 60%;
     padding: 10px;background-color: #E0ECF8;">
-<?php
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "ttgms";
+  <script>
 
-        try{
-          $conn = mysqli_connect($servername, $username, $password, $dbname);
-          
-        }
+  function checkForm(form)
+  {
 
-        catch(MySQLi_Sql_Exception $ex){
-          echo("error in connection");
-        }
+      re = /[0-9]/;
+      if(re.test(form.nGuideFname.value)) {
+        alert("Error: Invalid Firstname !");
+        form.nDriverFname.focus();
+        return false;
+      }
+ 
+        re = /^\w+$/;
+      if(!re.test(form.nGuideFname.value)) {
+        alert("Error: Invalid Firstname !");
+        form.nDriverFname.focus();
+        return false;
+      }
 
-        if(isset($_POST['register'])){
-          $nGuideFname = $_POST['nGuideFname']; 
-          $nGuideLname = $_POST['nGuideLname']; 
-          $nGnic = $_POST['nGnic']; 
-          $nGdob = $_POST['nGdob']; 
-          $nGcontactNo = $_POST['nGcontactNo']; 
-          $nGmail = $_POST['nGmail']; 
-          $nGaddress = $_POST['nGaddress'];
-          $nGcv = $_POST['nGcv'];
-          
-          
-          $register_query = "INSERT INTO `newguide`(`nGuideFname`, `nGuideLname`, `nGnic`, `nGdob`, `nGcontactNo`, `nGmail`,`nGaddress`,`nGcv`) VALUES ('$nGuideFname', '$nGuideLname', '$nGnic', '$nGdob', '$nGcontactNo', '$nGmail','nGaddress','nGcv')";
 
-          try{
-            $register_result = mysqli_query($conn, $register_query);
-            if(mysqli_affected_rows($conn)>0){
-   echo"<script>alert('registration Successfully');</script>";
-            }
-            else{
-             
-            echo"<script>alert('error in registration');</script>";
-            }
-            
-          }
-          catch(Exception $ex){
-            echo("error".$ex->getMessage());
-          }
-          }
+      re = /[0-9]/;
+      if(re.test(form.nGuideLname.value)) {
+        alert("Error: Invalid lastname !");
+        form.nDriverLname.focus();
+        return false;
+      }
+ 
+       re = /^\w+$/;
+      if(!re.test(form.nGuideLname.value)) {
+        alert("Error: Invalid lastname !");
+        form.nDriverLname.focus();
+        return false;
+      }
 
-        ?>
+      re = /[a-z]/;
+      if(re.test(form.nGcontactNo.value)) {
+        alert("Error: Invalid Phone Number!");
+        form.nDcontactNo.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(re.test(form.nGcontactNo.value)) {
+        alert("Error: Invalid Phone Number!");
+        form.nDcontactNo.focus();
+        return false;
+      }
+    re = /^\w+$/;
+      if(!re.test(form.nGcontactNo.value)) {
+        alert("Error: Invalid Phone Number!");
+        form.nDcontactNo.focus();
+        return false;
+      }
+         if(form.nGcontactNo.value != "") {
+      if(form.nGcontactNo.value.length =< 9) {
+        alert("Error: Phone number must contain at Ten characters!");
+        form.nGcontactNo.focus();
+        return false;
+      }
+       if(form.nGcontactNo.value.length > 11) {
+        alert("Error: Phone number must contain at Ten characters!");
+        form.nGcontactNo.focus();
+        return false;
+      }
+  }
+}
+</script>
                     
 <div class="col-15">
               <div class="thumbnail" style="width:100%";>
                     <center><b>
-                    	<form class="form-horizontal w3-left w3-border w3-light-gray" id="register-form" method="post" action="./new_guideBack.php" style="background-color: #E0ECF8;">
+                    	<form ... onsubmit="return checkForm(this);" class="form-horizontal w3-left w3-border w3-light-gray" id="register-form" method="post" action="./in/new_guideBack.php" style="background-color: #E0ECF8;">
                   <div class="text-center">
 
                   <center><div class="col-md-12 col-sm-12 alert-info">

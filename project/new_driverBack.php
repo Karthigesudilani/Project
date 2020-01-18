@@ -24,13 +24,13 @@
           $nDcv = $_POST['nDcv'];
           
           
-          $register1_query = "INSERT INTO `newdriver`(`nDriverFname`, `nDriverLname`, `nDnic`, `nDdob`, `nDcontactNo`, `nDmail`,`nDaddress`,`nDcv`) VALUES ('$nDriverFname', '$nDriverLname', '$nDnic', '$nDdob', '$nDcontactNo', '$nDmail','nDaddress','nDcv')";
+          $register1_query = "INSERT INTO `newdriver`(`newDriverId`,`nDriverFname`, `nDriverLname`, `nDnic`, `nDdob`, `nDcontactNo`, `nDmail`,`nDaddress`,`nDcv`) VALUES ('','$nDriverFname', '$nDriverLname', '$nDnic', '$nDdob', '$nDcontactNo', '$nDmail','nDaddress','nDcv')";
 
           try{
             $register1_result = mysqli_query($conn, $register1_query);
             if(mysqli_affected_rows($conn)>0){
    echo"<script>alert('registration Successfully');</script>";
-   header("location:./Home.php");
+   header("location:../Home.php");
                
             }
             else{

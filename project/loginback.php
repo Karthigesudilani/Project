@@ -36,7 +36,7 @@
        // $row = mysqli_fetch_assoc($result);
         if ($row = mysqli_fetch_assoc($result)) {
             
-              header("location:./leave.php");
+              header("location:./leave_driver.php");
               $_SESSION['email']=$email;
                 $_SESSION['psw']=$row['psw'];
               
@@ -52,7 +52,7 @@
        // $row = mysqli_fetch_assoc($result);
         if ($row = mysqli_fetch_assoc($result)) {
             
-              header("location:./leave.php");
+              header("location:./leave_guide.php");
               $_SESSION['email']=$email;
                 $_SESSION['psw']=$row['psw'];
               

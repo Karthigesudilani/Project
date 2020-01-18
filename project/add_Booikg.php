@@ -133,7 +133,7 @@ transform: scale(1.15);
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="Home.php">Home</a>
+      <a class="nav-link" href="add_home.php">Home</a>
     </li>
  
      <li class="nav-item">
@@ -166,25 +166,23 @@ transform: scale(1.15);
     </li>
     
      <li class="nav-item">
-      <a class="nav-link" href="package.php">Package</a>
+      <a class="nav-link" href="add_package.php">Package</a>
     </li>
    
      <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
-  
-    
-    <li class="nav-item">
-      <a class="nav-link" href="places.php">Tourist Attraction Places</a>
+  <li class="nav-item">
+      <a class="nav-link" href="add_newguide.php">New_Guide</a>
     </li>
-  
+    
     <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
     
     
       <li class="nav-item">
-      <a class="nav-link" href="about.php">About Us</a>
+      <a class="nav-link" href="add_newdriver.php">New_Driver</a>
     </li>
 
      <li class="nav-item">
@@ -215,6 +213,8 @@ transform: scale(1.15);
     </li>
   </ul>
 </nav>
+</div>
+
 <br /><br />
 <center>
 <div style="background-color: #E0E6F8; width: 80% ">

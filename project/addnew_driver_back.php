@@ -20,7 +20,7 @@ $conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
        			 $filesize = $_FILES["photo"]["size"];
        			 $mealid = $_POST['vId'];
 
-				$driverId = $_POST['driverId'];
+			
 
 				$dName= $_POST['dName'];
 
@@ -33,6 +33,7 @@ $conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
                 $dqualification= $_POST['dqualification'];
 
                 $password =$_POST['password'];
+                $fees = $_POST['fees'];
     
         // Verify file extension
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
@@ -50,7 +51,7 @@ $conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
             } else{
                 move_uploaded_file($_FILES["photo"]["tmp_name"], "upload/" . $filename);
                 
-               $sql = "INSERT INTO driver (driverId, dName,dEmail,dPhoneNo,dAge,dqualification,password,Image) VALUES('$driverId','$dName','$dEmail','$dPhoneNo','$dAge','&dqualification','$password','$filename');";
+               $sql = "INSERT INTO driver (driverId, dName,dEmail,dPhoneNo,dAge,dqualification,password,Image,fees) VALUES('','$dName','$dEmail','$dPhoneNo','$dAge','&dqualification','$password','$filename','$fees');";
 				echo $sql;
 			mysqli_query($conn,$sql);
 			 header("location:./add_driver.php");

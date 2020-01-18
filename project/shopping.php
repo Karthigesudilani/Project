@@ -1,3 +1,8 @@
+<?php 
+
+session_start();
+$connect = mysqli_connect("localhost", "root", "", "ttgms");
+?>
 <HTML lang="en">
 <HEAD>
   <TITLE>
@@ -116,10 +121,11 @@ transform: scale(1.15);
 
 </style>
 </HEAD>
-
 <BODY>
-
-<div style="background-color: Gray;font-style:italic;">
+<div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;">
+<div style="background-color: Gray; color: black; font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
 
@@ -131,7 +137,7 @@ transform: scale(1.15);
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="aa_home.php">Home</a>
+      <a class="nav-link" href="Home.php">Home</a>
     </li>
  
      <li class="nav-item">
@@ -139,7 +145,7 @@ transform: scale(1.15);
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="add_transport.php">Transport</a>
+      <a class="nav-link" href="Transportation.php">Transport</a>
     </li>
         
 
@@ -148,7 +154,7 @@ transform: scale(1.15);
     </li>
     
     <li class="nav-item">
-      <a class="nav-link" href="add_guide.php">Guide</a>
+      <a class="nav-link" href="guide.php">Guide</a>
     </li>
 
      <li class="nav-item">
@@ -156,7 +162,7 @@ transform: scale(1.15);
     </li>
  
      <li class="nav-item">
-      <a class="nav-link" href="add_driver.php">Driver</a>
+      <a class="nav-link" href="driver.php">Driver</a>
     </li>
   
      <li class="nav-item">
@@ -164,23 +170,25 @@ transform: scale(1.15);
     </li>
     
      <li class="nav-item">
-      <a class="nav-link" href="add_package.php">Package</a>
+      <a class="nav-link" href="package.php">Package</a>
     </li>
    
      <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
-  <li class="nav-item">
-      <a class="nav-link" href="add_newguide.php">New_Guide</a>
-    </li>
+  
     
+    <li class="nav-item">
+      <a class="nav-link" href="places.php">Tourist Attraction Places</a>
+    </li>
+  
     <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
     
     
       <li class="nav-item">
-      <a class="nav-link" href="add_newdriver.php">New_Driver</a>
+      <a class="nav-link" href="about.php">About Us</a>
     </li>
 
      <li class="nav-item">
@@ -188,7 +196,7 @@ transform: scale(1.15);
     </li>
    
  <li class="nav-item" >
-      <a class="nav-link" href="add_cancelbooking.php">Cancel Booking</a>
+      <a class="nav-link" href="cancelbooking.php">Cancel Booking</a>
     </li>
 
      <li class="nav-item">
@@ -196,7 +204,7 @@ transform: scale(1.15);
     </li>
 
    <li class="nav-item" >
-      <a class="nav-link" href="add_Booikg.php">Booking</a>
+      <a class="nav-link" href="shopping.php"><img src="img\add.png" /></a>
     </li>
  <li class="nav-item">
       <a class="nav-link" href=""></a>
@@ -205,139 +213,126 @@ transform: scale(1.15);
       <a class="nav-link" href=""></a>
     </li>
     <li class="nav-item" >
-  <a class="nav-link" href="Home.php">Log Out</a>
+  <a class="nav-link" href="login.php"><img src="img\log.png" /></a>
     </li>
     
     </li>
   </ul>
 </nav>
 </div>
-    <!--HOME SECTION-->
-     
- 
-<br /><br />
+<br />
 <center>
-<div >
-  <h1> <u>Guide</u> </h1>
-          <div class="col-sm-12">
-            <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST"> 
-                <table><tr><td>
-           
-                  <input style="border-color:grey;" class="form-control"  name="keyname" type="text" placeholder="Name" id="meal_name">
-                  
-           </td><td>
-                
-                  <input style="padding-top:5px;" class="btn btn-dark" type="submit" value="Search" name="submit">
-                  
-              </td>
-                
-                <td>
-                
-                  <input style="padding-top:5px;" class="btn btn-dark" type="submit" value="Veiw" name="submit">
-                  
-              </td>
+			<div style="background-color: #E0E6F8; width: 80%; clear:both">
+			<br />
+			<h3><u>Order Details</u></h3>
+			<div class="table-responsive">
+				<table class="table table-bordered">
+					<tr>
+						<th width="40%">Details</th>						
+						<th width="20%">Price</th>
+						<th width="15%">Action</th>
+					</tr>
+					<?php
+					if(!empty($_SESSION["vehicle"]))
+					{
+						$total = 0;
+						foreach($_SESSION["vehicle"] as $keys => $values)
+						{
+					?>
+					<tr>
+						<td>Transportation Id :- <?php echo $values["vId"]; ?></td>
+						
+						<td>Rs <?php echo $values["fees"]; ?></td>
+						
+						<td><a href="Transportation.php?action=delete&id=<?php echo $values["vId"]; ?>"><span class="text-danger">Remove</span></a></td>
+					</tr>
 
-
-              </form>
-            <td>
-          </div>       
-          <br />             
-          <div class="col-sm-12">
-            <button style="float:right;" class="btn btn-dark" type="button" onClick= "window.location.href ='addnew_guide.php';" ><i class=></i>Add New Guide</button>
-          </div>
-                 </td></tr></table>       
-          </div>
-
-
-                      
-          <div id="result">
+					<?php
+							$total = $total + $values["fees"] ;
+						}
+					
+					}
+?><tr>
+            <td colspan="2" align="right">Sub Total</td>
+            <td align="right">Rs. <?php echo number_format($total, 2); ?></td>
             
+          </tr><?php
+
+          if(!empty($_SESSION["guide"]))
+          {
+            $total = 0;
+            foreach($_SESSION["guide"] as $keys => $values)
+            {
+          ?>
+          <tr>
+            <td>Guide Id :- <?php echo $values["guideId"]; ?></td>
+            
+            <td>Rs <?php echo $values["fees"]; ?></td>
+            
+            <td><a href="guide.php?action=delete&id=<?php echo $values["guideId"]; ?>"><span class="text-danger">Remove</span></a></td>
+          </tr>
+          <?php
+             $total = $total + $values["fees"] ;
+            }
+            ?><tr>
+            <td colspan="2" align="right">Sub Total</td>
+            <td align="right">Rs. <?php echo number_format($total, 2); ?></td>
+            
+          </tr><?php
+          
+          }
 
 
-          </div>                    
-          <!--end search bar-->                                 
-            <div class="row  w3-margin" >
-              <div class ="container">
-              <table class="table table-striped table-bordered" id="example" style="width: 95%;">
-                <thead>
-                  <tr>
-                    <th>Guide ID</th>
-                    <th>Guide Name</th>
-                    <th>Language</th>
-                    <th>Guide NIC</th>
-                    <th>Guide Email</th>
-                    <th>Guide Phone Number</th>
-                    <th>Guide Qualification</th>
-                    
-                    <th>Image</th>
-                    <th></th>   
-                  </tr>
-
-                    <?php 
-                      if(isset($_POST["submit"])) {
-$dbServername ="localhost";
-$dbUsername ="root";
-$dbPassword ="";
-$dbName ="ttgms";
-
-$conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
-
-                        $sql = "SELECT * FROM guide WHERE gName LIKE '%{$_POST["keyname"]}%' OR Language LIKE '%{$_POST["keyname"]}%'";
-
-                      $result = $conn -> query($sql);
+          if(!empty($_SESSION["driver"]))
+          {
+            $total = 0;
+            foreach($_SESSION["driver"] as $keys => $values)
+            {
+          ?>
+          <tr>
+            <td>Driver Id :- <?php echo $values["driverId"]; ?></td>
+            
+            <td>Rs <?php echo $values["fees"]; ?></td>
+          
+            <td><a href="driver.php?action=delete&id=<?php echo $values["driverId"]; ?>"><span class="text-danger">Remove</span></a></td>
+          </tr>
+          <?php
+              $total = $total + $values["fees"] ;
+            }
 
           
-                      if ($result->num_rows>0 ) {
 
-
-                        $i=0;
-
-
-                        while($row = $result->fetch_assoc()) {
-                            $i++;
-
-                          echo "<tr>";
-                              echo "<td>"; echo $row['guideId'];  echo "</td>";
-                              echo "<td>"; echo $row['gName'];  echo "</td>";
-                              echo "<td>"; echo $row['language'];  echo "</td>";
-                              echo "<td>"; echo $row['gNIC'];  echo "</td>";
-                              echo "<td>"; echo $row['gEmail'];  echo "</td>";
-                              echo "<td>"; echo $row['gPhoneNo'];  echo "</td>";
-                              echo "<td>"; echo $row['gqualification'];  echo "</td>";
-                              
-                              echo "<td>"; echo "<img src=in/upload/".$row['Image'].">"; echo "</td>";
-                              echo "<td>";
-                              echo "<button type='button' class='btn btn-danger'> <a style='color:white;text-decoration:none;'href='add_guide_delete.php?id={$row["guideId"]}'>Delete </a></button>";
-                              echo "</td>";
-                              echo "</tr>";
-                            }
-
-
-                      }
-
-
-                        }
-
-
-
-
-
-
-                      
-                    ?>
-                </thead>
-              </table>
-            </div>  
-        </div>
-      </div>                </div></b></h5></center></div>
-
+					?>
+				<tr>
+            <td colspan="2" align="right">Sub Total</td>
+            <td align="right">Rs. <?php echo number_format($total, 2); ?></td>
+            
+          </tr>
+          <?php   } ?>
+            
+        </table>
+        </form>
+          <!--end search bar-->                                 
+           
+			<div class="text-right">
+  
+      
+           <a href = "CheckOutForm.php"> <button type="button" class="btn btn-success">Check Out</button></a>
+                    </div></center>
+ <br />   </div>
 </div>
+
+</b></h5></center></div>
+
+
+
 
 <footer>
 
     <div class="footer" id="footer">
-
-<div class="container"> 
+ 
+        <div class="container">
+ 
             <div class="row">
  
                 <div class="col-lg-3  col-md-3 col-sm-5 col-xs-7">
@@ -414,6 +409,7 @@ $conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
     </div>
  
        </div>
-</footer></div>
+</footer>
+</div>
 </BODY>
 </HTML>

@@ -20,18 +20,18 @@
           $reason = $_POST['reason']; 
                     
           
-          $register1_query = "INSERT INTO `leave_driver`(`driverId`, `dEmail`, `date`, `reason`) VALUES ('$driverId', '$dEmail', '$date', '$reason')";
+          $register1_query = "INSERT INTO `leave_driver`(`leaveDriverId`,`driverId`, `dEmail`, `date`, `reason`) VALUES ('','$driverId', '$dEmail', '$date', '$reason')";
 
           try{
             $register1_result = mysqli_query($conn, $register1_query);
             if(mysqli_affected_rows($conn)>0){
    echo"<script>alert('registration Successfully');</script>";
-    header("location:./Home.php");
+    header("location:./leave_driver.php");
                
             }
             else{
              
-            echo"<script>alert('error in registration');</script>";
+            echo"<script>alert('error in apply leave');</script>";
             }
             
           }

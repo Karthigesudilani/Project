@@ -160,12 +160,11 @@ transform: scale(1.15);
 
 </style>
 </HEAD>
-
 <BODY>
 <div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;">
-<div style="background-color: Gray;font-style:italic;">
+<div style="background-color: Gray; color: black; font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
 
@@ -185,7 +184,7 @@ transform: scale(1.15);
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="Transportation.php">Transport</a>
+      <a class="nav-link active" href="Transportation.php">Transport</a>
     </li>
         
 
@@ -244,7 +243,7 @@ transform: scale(1.15);
     </li>
 
    <li class="nav-item" >
-      <a class="nav-link" href=""><img src="img\add.png" /></a>
+      <a class="nav-link" href="shopping.php"><img src="img\add.png" /></a>
     </li>
  <li class="nav-item">
       <a class="nav-link" href=""></a>
@@ -253,15 +252,13 @@ transform: scale(1.15);
       <a class="nav-link" href=""></a>
     </li>
     <li class="nav-item" >
-  <a class="nav-link" href="Home.php">Log Out</a>
+  <a class="nav-link" href="login.php"><img src="img\log.png" /></a>
     </li>
     
     </li>
   </ul>
 </nav>
 </div>
-
-
 
 <footer>
   <div class="container">

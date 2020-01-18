@@ -1,6 +1,9 @@
-<HTML lang="en">
-<HEAD>
-  <TITLE>
+
+  <!doctype html>
+    <html lang="en">
+      <head>
+      
+<TITLE>
   Tourists Transportation and Guiding Management System for a Travel Agency In Badulla  
   </TITLE>
     <meta charset="utf-8">
@@ -10,18 +13,64 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-   <link href="style.css" type="text/css" rel="stylesheet" />
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-        <link href='jquery-bar-rating-master/dist/themes/fontawesome-stars.css' rel='stylesheet' type='text/css'>
-        
-        <!-- Script -->
-        <script src="jquery-3.0.0.js" type="text/javascript"></script>
-        <script src="jquery-bar-rating-master/dist/jquery.barrating.min.js" type="text/javascript"></script>
+        <!-- Bootstrap CSS -->
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-<!-- CUSTOM STYLE CSS -->
-    <link href="ass\style.css" rel="stylesheet" />
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+       
+       <link href="ass\style.css" rel="stylesheet" />
+          <script>
+    $(document).ready(function(){
 
+     $('#comment_form').on('submit', function(event){
+      event.preventDefault();
+      var form_data = $(this).serialize();
+      $.ajax({
+       url:"addcomment.php",
+       method:"POST",
+       data:form_data,
+       dataType:"JSON",
+       success:function(data)
+       {
+      if(data.error != '')
+      {
+       $('#comment_form')[0].reset();
+       $('#comment_message').html(data.error);
+       $('#comment_id').val('0');
+       load_comment();
+      }
+       }
+      })
+     });
 
+     load_comment();
+
+     function load_comment()
+     {
+      $.ajax({
+       url:"fetchcomment.php",
+       method:"POST",
+       success:function(data)
+       {
+      $('#display_comment').html(data);
+       }
+      })
+     }
+
+     $(document).on('click', '.reply', function(){
+      var comment_id = $(this).attr("id");
+      $('#comment_id').val(comment_id);
+      $('#comment_name').focus();
+     });
+
+    });
+    </script>
+    
       <style>
 
       * {
@@ -119,16 +168,12 @@ transform: scale(1.15);
 
  
 
-</style>
  
 
-</HEAD>
-
-<BODY>
-<div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;">
-<div style="background-color: Gray;font-style:italic;">
+</style>
+      </head>
+      <body>
+        <div style="background-color: Gray; color: black; font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
 
@@ -146,12 +191,17 @@ transform: scale(1.15);
      <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
+     <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
 
     <li class="nav-item">
       <a class="nav-link" href="Transportation.php">Transport</a>
     </li>
         
-
+ <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
      <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
@@ -159,7 +209,9 @@ transform: scale(1.15);
     <li class="nav-item">
       <a class="nav-link" href="guide.php">Guide</a>
     </li>
-
+ <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
      <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
@@ -167,7 +219,9 @@ transform: scale(1.15);
      <li class="nav-item">
       <a class="nav-link" href="driver.php">Driver</a>
     </li>
-  
+   <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
      <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
@@ -175,7 +229,9 @@ transform: scale(1.15);
      <li class="nav-item">
       <a class="nav-link" href="package.php">Package</a>
     </li>
-   
+    <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
      <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
@@ -184,30 +240,16 @@ transform: scale(1.15);
     <li class="nav-item">
       <a class="nav-link" href="places.php">Tourist Attraction Places</a>
     </li>
-  
+   <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
     <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
     
     
       <li class="nav-item">
-      <a class="nav-link" href="about.php">About Us</a>
-    </li>
-
-     <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
-   
- <li class="nav-item" >
-      <a class="nav-link" href="cancelbooking.php">Cancel Booking</a>
-    </li>
-
-     <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
-
-   <li class="nav-item" >
-      <a class="nav-link" href=""><img src="img\add.png" /></a>
+      <a class="nav-link active" href="about.php">About Us</a>
     </li>
  <li class="nav-item">
       <a class="nav-link" href=""></a>
@@ -215,41 +257,129 @@ transform: scale(1.15);
      <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
-    <li class="nav-item" >
-  <a class="nav-link" href=""><img src="img\log.png" /></a>
+   
+ <li class="nav-item" >
+      <a class="nav-link" href="cancelbooking.php">Cancel Booking</a>
     </li>
-    
+ <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
+
+   <li class="nav-item" >
+      <a class="nav-link" href="shopping.php"><img src="img\add.png" /></a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
+ <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
+    <li class="nav-item" >
+  <a class="nav-link" href="login.php"><img src="img\log.png" /></a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li> <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
+
     </li>
   </ul>
 </nav>
 </div>
-     </b></h5></center></div>
-      
-
-</div>
-
+</b></h5></center>
 <br>
-<div style="border-style:double; background-color:#A9D0F5;">
+    <div class ="col-12">
+      <div class ="col-6">
+      <div>
+      <h2 align ="center">Rate us</h2>
+            <?php
+    
+$dbServername ="localhost";
+$dbUsername ="root";
+$dbPassword ="";
+$dbName ="ttgms";
+
+$conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
+
+$find_data = "select * from rate";
+$result = $conn -> query($find_data);
+while ($row = mysqli_fetch_assoc($result)) {
+  
+  $id = $row['id'];
+  $name = $row['name'];
+  $food = $row['food'];
+  $current_rating = $row['rating'];
+  $hits = $row['hits'];
+
+  echo "
+          <form action='rates.php' method='POST'>
+          $name:<select name='rating' class='form-control selcls'>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          
+          </select>
+           <div class='form-group'>
+          <input type='hidden' value='$food' name='food'>
+          </div>
+          <div>
+          <input type ='submit' value='Rate!' class='btn btn-info'> </div>Current Rating:";
+  echo round($current_rating, 3);
+  echo "
 
 
+          </form>
 
-<form action ="postcomment.php" method = "POST">
-<br>
-<h2>Enter Your Comment</h2>
-<input type="text" name="name" placeholder="Your name">
- <br>
- <br>
-<textarea name="comment" placeholder="Enter the comment" cols="50" rows="2" >  </textarea><br><br>
-<input type="submit" value="Comment">
-</form>
-</div>
+          ";
+}
+?>
+        </div>
+      <div class="">
+            <h2 align="center">Comment us</h2>
+          <br />
 
-
-
-
-
-     
-<footer>
+           <form method="POST" id="comment_form">
+            <div class="form-group">
+              <input type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Enter Name" />
+            </div>
+            <div class="form-group">
+              <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Enter Comment" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="hidden" name="comment_id" id="comment_id" value="0" />
+              <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" />
+            </div>
+          </form>
+          <span id="comment_message"></span>
+            <br />
+          <div id="display_comment"></div>
+        </div>
+    </div></div></div>
+  <footer>
 
  
     <div class="footer" id="footer">
@@ -332,4 +462,6 @@ transform: scale(1.15);
     </div>
  
        </div>
-</footer></div></BODY></HTML>
+</footer></div></BODY></HTML>     
+  </body>
+</html>

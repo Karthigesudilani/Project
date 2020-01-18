@@ -20,13 +20,13 @@
           $reason = $_POST['reason']; 
                     
           
-          $register1_query = "INSERT INTO `leave_guide`(`guideId`, `gEmail`, `date`, `reason`) VALUES ('$guideId', '$gEmail', '$date', '$reason')";
+          $register1_query = "INSERT INTO `leave_guide`(`LGId`,`guideId`, `gEmail`, `date`, `reason`) VALUES ('','$guideId', '$gEmail', '$date', '$reason')";
 
           try{
             $register1_result = mysqli_query($conn, $register1_query);
             if(mysqli_affected_rows($conn)>0){
    echo"<script>alert('registration Successfully');</script>";
-    header("location:./Home.php");
+    header("location:./leave_guide.php");
                
             }
             else{

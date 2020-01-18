@@ -1,47 +1,3 @@
-<?php
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "ttgms";
-
-        try{
-          $conn = mysqli_connect($servername, $username, $password, $dbname);
-          
-        }
-
-        catch(MySQLi_Sql_Exception $ex){
-          echo("error in connection");
-        }
-
-        if(isset($_POST['register'])){
-          $fName = $_POST['fName']; 
-          $lName = $_POST['lName']; 
-          $uNIC = $_POST['uNIC']; 
-          $uAge = $_POST['uAge']; 
-          $userMail = $_POST['userMail']; 
-          $password = $_POST['password']; 
-          
-          
-          $register_query = "INSERT INTO `user`(`fName`, `lName`, `uNIC`, `uAge`, `userMail`, `password`) VALUES ('$fName', '$lName', '$uNIC', '$uAge', '$userMail', '$password')";
-
-          try{
-            $register_result = mysqli_query($conn, $register_query);
-            if(mysqli_affected_rows($conn)>0){
-              echo"<script>alert('registration successful');</script>";
-            }
-            else{
-             
-            echo"<script>alert('error in registration');</script>";
-            }
-            
-          }
-          catch(Exception $ex){
-            echo("error".$ex->getMessage());
-          }
-          }
-
-        ?>
-
 <HTML lang="en">
 <HEAD>
   <TITLE>
@@ -160,12 +116,11 @@ transform: scale(1.15);
 
 </style>
 </HEAD>
-
 <BODY>
 <div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;">
-<div style="background-color: Gray;font-style:italic;">
+<div style="background-color: Gray; color: black; font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
 
@@ -185,7 +140,7 @@ transform: scale(1.15);
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="Transportation.php">Transport</a>
+      <a class="nav-link active" href="Transportation.php">Transport</a>
     </li>
         
 
@@ -244,7 +199,7 @@ transform: scale(1.15);
     </li>
 
    <li class="nav-item" >
-      <a class="nav-link" href=""><img src="img\add.png" /></a>
+      <a class="nav-link" href="shopping.php"><img src="img\add.png" /></a>
     </li>
  <li class="nav-item">
       <a class="nav-link" href=""></a>
@@ -253,13 +208,60 @@ transform: scale(1.15);
       <a class="nav-link" href=""></a>
     </li>
     <li class="nav-item" >
-  <a class="nav-link" href="Home.php">Log Out</a>
+  <a class="nav-link" href="login.php"><img src="img\log.png" /></a>
     </li>
     
     </li>
   </ul>
 </nav>
 </div>
+<div style="background-color: #E0E6F8; width: 60% "> <br><h1><u> Booking for Package</u></h1>    
+                                    
+<form   id="add_meal" method="POST" action="package_BookingBack.php" enctype="multipart/form-data">
+
+<div class="w3-half w3-padding">      
+    <input class="w3-input w3-border" name="fullname" type="text" placeholder="Full Name"  id="fullname"></div><br />
+<div class="w3-padding">
+     <input class="w3-input w3-border" name="email" type="text" placeholder=" Email"  id="email"></div>   
+     <br />
+     <div class="form-group">
+              <label class="control-label col-sm-4" for="pakageType">Package Type :- &nbsp&nbsp&nbsp </label> 
+              <div class="col-sm-10">
+                <select name="pakageType" style="width:172px">
+                    <option value="family" > Family</option>
+                    <option value="couple">Couple</option>
+                    <option value="friend">friend</option>
+                    
+                </select>
+     </div></div>
+<div class="w3-padding">
+     <input class="w3-input w3-border" name="address" type="text" placeholder="address"  id="address"></div>   
+     <br />
+     <div class="w3-padding">
+     <input class="w3-input w3-border" name="phoneNum" type="text" placeholder="Phone Number"  id="phoneNum"></div>   
+     <br />
+<div class="w3-padding">
+     <input class="w3-input w3-border" name="startDate" type="text" placeholder="Start Date"  id="startDate"></div>   
+     <br />
+
+<div class="w3-row-padding w3-margin-bottom">   
+<div class="w3-half">
+<input type="submit" class="w3-btn w3-green w3-block " name="meal_add" value="Booking">
+                                                </div> <br />
+<div class="w3-half">
+<input type="reset" class="w3-btn w3-red w3-block " name="meal-cancel" value="Cancel">
+                                                </div>                              
+                                            </div>
+                                                                
+                                        </form>
+                                    </div><br /><br />
+                                            <div id="result"></div>
+                                                                                
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div>  
+
 
 
 

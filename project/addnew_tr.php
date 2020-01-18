@@ -219,8 +219,7 @@ transform: scale(1.15);
 <div style="background-color: #E0E6F8; width: 60% "> <br><h1> Add a Trasport</h1>    
                                     
 <form   id="add_meal" method="POST" action="addnew_tr_back.php" enctype="multipart/form-data">
-<div class="w3-half w3-padding">      
-    <input class="w3-input w3-border" name="vId" type="text" placeholder="Vehicle ID"  id="vId" value=""></div><br />
+
 <div class="w3-half w3-padding">      
     <input class="w3-input w3-border" name="vName" type="text" placeholder="Vehicle Name"  id="vName"></div><br />
 <div class="w3-padding">
@@ -239,6 +238,8 @@ transform: scale(1.15);
                                         
                        
                                                     </div>
+                                                    <div class="w3-padding">
+     <input class="w3-input w3-border" name="amount" type="text" placeholder="Amount per KM"  id="amount"></div>      
 <div class="w3-row-padding w3-margin-bottom">   
 <div class="w3-half">
 <input type="submit" class="w3-btn w3-green w3-block " name="meal_add" value="Add Transport">
