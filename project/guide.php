@@ -323,14 +323,81 @@ transform: scale(1.15);
 
     <a href="Transportation.php"><button type="button" class="btn btn-success">Trasport</button> </a>
         <a href="driver.php"><button type="button" class="btn btn-success">Driver</button>  </a>       
-            <a  href="CheckOutForm.php"><button type="button" class="btn btn-success">Check Out</button></a>
+            <a  href="login.php"><button type="button" class="btn btn-success">Check Out</button></a>
 <br ?                    </div></center>
     </div>
 </div></div></b></h5></center></div>
+<div class="container">
+<table><tr><td width="50%">
+
+    
+      <div>
+      <h2 align ="center">Rate About Guide Service</h2>
+            <?php
+    
+$dbServername ="localhost";
+$dbUsername ="root";
+$dbPassword ="";
+$dbName ="ttgms";
+
+$conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
+
+$find_data = "select * from rate";
+$result = $conn -> query($find_data);
+while ($row = mysqli_fetch_assoc($result)) {
+  
+  $id = $row['id'];
+  $name = $row['name'];
+  $food = $row['food'];
+  $current_rating = $row['rating'];
+  $hits = $row['hits'];
+
+  echo "
+          <form action='rates.php' method='POST'>
+          $name:<select name='rating' class='form-control selcls'>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          
+          </select>
+           <div class='form-group'>
+          <input type='hidden' value='$food' name='food'>
+          </div>
+          <div>
+          <input type ='submit' value='Rate!' class='btn btn-info'> </div>Current Rating:";
+  echo round($current_rating, 3);
+  echo "
 
 
+          </form>
 
-<footer>
+          ";
+}
+?>
+        </div></td><td>
+      <div class="container">
+            <h2 align="center">Comment About Guide Service</h2>
+          <br />
+
+           <form method="POST" id="comment_form">
+            <div class="form-group">
+              <input type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Enter Name" />
+            </div>
+            <div class="form-group">
+              <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Enter Comment" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="hidden" name="comment_id" id="comment_id" value="0" />
+              <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" />
+            </div>
+          </form>
+          <span id="comment_message"></span>
+            <br />
+          <div id="display_comment"></div>
+        </div>
+    </div></div></div></td></tr></table><footer>
 
     <div class="footer" id="footer">
  

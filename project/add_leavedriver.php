@@ -1,22 +1,23 @@
+
 <HTML lang="en">
 <HEAD>
-  <TITLE>
-  Tourists Transportation and Guiding Management System for a Travel Agency In Badulla  
-  </TITLE>
-    <meta charset="utf-8">
+	<TITLE>
+	Tourists Transportation and Guiding Management System for a Travel Agency In Badulla	
+	</TITLE>
+	  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	
 
 <!-- CUSTOM STYLE CSS -->
     <link href="ass\style.css" rel="stylesheet" />
 
 
-      <style>
+			<style>
 
       * {
           box-sizing: border-box;
@@ -109,13 +110,15 @@ transform: scale(1.15);
  
                 color: #000000;
  
-}
 
+
+ 
 
  
 
 </style>
 </HEAD>
+
 
 <BODY>
 <div style=" color: black; font-style:italic;">
@@ -252,54 +255,96 @@ transform: scale(1.15);
   </ul>
 </nav>
 </div>
-<center>
-<div style="background-color: #E0E6F8; width: 60% "> <br><h1><u> Add a Trasport</u></h1>    
-                                    
-<form   id="add_meal" method="POST" action="addnew_tr_back.php" enctype="multipart/form-data">
-
-<div class="w3-half w3-padding">      
-    <input class="w3-input w3-border" name="vName" type="text" placeholder="Vehicle Name"  id="vName"></div><br />
-<div class="w3-padding">
-     <input class="w3-input w3-border" name="howManyPeople" type="text" placeholder="How May People can travel"  id="howManyPeople"></div>            
-<div class="w3-padding"><br />
- <div class="w3-border w3-col s4   w3-center" style="margin-top:8px;">
-<div class="w3-padding ">
-<h3>Upload a photo</h3><hr/>
- <div style="width:10%;height:10%;"><img id="myImg" src="img\tra.png" alt="Add image" class="w3-image" style="width:100%;height:100%"/>
-                                                    </div>
-                                                    <br>        
-                                                
-<input type="file" name="photo" id="fileSelect" class="w3-btn w3-block w3-black w3-padding-large">
- <p><strong>Note:</strong> Only .jpg, .jpeg, .gif, .png formats allowed to a max size of 5 MB.</p>
-                                             </div> 
-                                        
-                       
-                                                    </div>
-                                                    <div class="w3-padding">
-     <input class="w3-input w3-border" name="amount" type="text" placeholder="Amount per KM"  id="amount"></div>      <br />
-<div class="w3-row-padding w3-margin-bottom">   
-<div class="w3-half">
-<input type="submit" class="w3-btn w3-green w3-block " name="meal_add" value="Add Transport">
-                                                </div> <br />
-<div class="w3-half">
-<input type="reset" class="w3-btn w3-red w3-block " name="meal-cancel" value="Cancel">
-                                                </div>                              
-                                            </div>
-                                                                
-                                        </form>
-                                    </div><br /><br />
-                                            <div id="result"></div>
-                                                                                
-                                </div> 
-                            </div> 
-                        </div> 
-                    </div>  
+    </div>
+<center><div style="background-color: #E0E6F8; width: 80% ">
+  <h1> <u>Leave Driver Details</u> </h1>
+          <div class="col-sm-12">
+                
+          </div>
 
 
+      <br />                
+          <div id="result">
+            
 
 
-<footer>
+          </div>                    
+          <!--end search bar-->                                 
+            <div class="row  w3-margin" >
+              <div class ="container">
+              <table class="table table-striped table-bordered" id="example" style="width: 95%;">
+                <thead>
+                  <tr>
+                    <th>leave Driver Id</th>
+                    <th>DriverId</th>
+                    <th>Email</th>
+                    <th>Date</th>
+                    <th>Reason</th>
+                    
+                    <th></th>   
+                  </tr>
 
+                    <?php 
+                      if(isset($_POST["submit"])) {
+$dbServername ="localhost";
+$dbUsername ="root";
+$dbPassword ="";
+$dbName ="ttgms";
+
+$conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
+
+                        $sql = "SELECT * FROM leave_driver";
+
+                      $result = $conn -> query($sql);
+
+          
+                      if ($result->num_rows>0 ) {
+
+
+                        $i=0;
+
+
+                        while($row = $result->fetch_assoc()) {
+                            $i++;
+
+                          echo "<tr>";
+                              echo "<td>"; echo $row['leaveDriverId'];  echo "</td>";
+                              echo "<td>"; echo $row['driverId'];  echo "</td>";
+                              echo "<td>"; echo $row['dEmail'];  echo "</td>";
+                              echo "<td>"; echo $row['date'];  echo "</td>";
+                              echo "<td>"; echo $row['reason'];  echo "</td>";
+                              
+                              echo "<td>";
+                              echo "<button type='button' class='btn btn-danger'> <a style='color:white;text-decoration:none;'href='add_leavedriverDelete.php?id={$row["leaveDriverId"]}'>Delete </a></button>";
+                              echo "</td>";
+                              echo "</tr>";
+                            }
+
+
+                      }
+
+
+                        }
+
+
+
+
+
+
+                      
+                    ?>
+                </thead>
+              </table>
+            </div>  
+        </div>
+      </div>                </div></b></h5></center></div>
+
+</div>
+
+
+     <footer>
+
+ 
     <div class="footer" id="footer">
  
         <div class="container">
@@ -381,5 +426,7 @@ transform: scale(1.15);
  
        </div>
 </footer>
+</div>
+
 </BODY>
 </HTML>

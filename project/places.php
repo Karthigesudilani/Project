@@ -200,7 +200,7 @@ transform: scale(1.15);
     </li>
 
    <li class="nav-item" >
-      <a class="nav-link" href=""><img src="img\add.png" /></a>
+      <a class="nav-link" href="shopping.php"><img src="img\add.png" /></a>
     </li>
  <li class="nav-item">
       <a class="nav-link" href=""></a>
@@ -209,7 +209,7 @@ transform: scale(1.15);
       <a class="nav-link" href=""></a>
     </li>
     <li class="nav-item" >
-  <a class="nav-link" href=""><img src="img\log.png" /></a>
+  <a class="nav-link" href="login.php"><img src="img\log.png" /></a>
     </li>
     
     </li>

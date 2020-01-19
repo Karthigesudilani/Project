@@ -1,60 +1,4 @@
-<?php 
-
-session_start();
-$connect = mysqli_connect("localhost", "root", "", "ttgms");
-
-if(isset($_POST["add_to_cart"]))
-{
-  if(isset($_SESSION["vehicle"]))
-  {
-    $item_array_id = array_column($_SESSION["vehicle"], "vId");
-    if(!in_array($_GET["id"], $item_array_id))
-    {
-      $count = count($_SESSION["vehicle"]);
-      $item_array = array(
-        'vId'     =>  $_GET["id"],
-        'vName '     =>  $_POST["hidden_name"],
-        'howManyPeople'=> $_POST["hidden_people"],
-        'fees'    =>  $_POST["hidden_fees"],
-        
-      );
-      $_SESSION["vehicle"][$count] = $item_array;
-    }
-    else
-    {
-      echo '<script>alert("Item Already Added")</script>';
-    }
-  }
-  else
-  {
-    $item_array = array(
-      'vId'     =>  $_GET["id"],
-        'vName '     =>  $_POST["hidden_name"],
-        'howManyPeople'=> $_POST["hidden_people"],
-        'fees'    =>  $_POST["hidden_fees"],
-        
-    );
-    $_SESSION["vehicle"][0] = $item_array;
-  }
-}
-
-if(isset($_GET["action"]))
-{
-  if($_GET["action"] == "delete")
-  {
-    foreach($_SESSION["vehicle"] as $keys => $values)
-    {
-      if($values["vId"] == $_GET["id"])
-      {
-        unset($_SESSION["vehicle"][$keys]);
-        echo '<script>alert("Item Removed")</script>';
-        echo '<script>window.location="Transportation.php"</script>';
-      }
-    }
-  }
-}
-
-?><HTML lang="en">
+<HTML lang="en">
 <HEAD>
   <TITLE>
   Tourists Transportation and Guiding Management System for a Travel Agency In Badulla  
@@ -172,7 +116,6 @@ transform: scale(1.15);
 
 </style>
 </HEAD>
-
 <BODY>
 <div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
   background-attachment: fixed;  
@@ -272,144 +215,54 @@ transform: scale(1.15);
   </ul>
 </nav>
 </div>
-     
-<center>
-<div style="background-color: #E0E6F8; width: 80% ">
-  <h1> <u>Transport</u> </h1>
-          <div class="col-sm-12">
-   
+<br>
+<div class="container-fluid" style="box-shadow:3px 3px 3px 3px silver; margin: auto;
+    width: 45%;
+  height:400px;
+    padding: 10px;">
 
-
-                      
-          <div id="result">
-            
-
-
-          </div>
-<?php
-        $query = "SELECT * FROM vehicle";
-        $result = mysqli_query($connect, $query);
-        if(mysqli_num_rows($result) > 0)
-        {
-          while($row = mysqli_fetch_array($result))
-          {
-        ?>
-        <div class="col-md-4">
-        <form method="post" action="Transportation.php?action=add&id=<?php echo $row["vId"]; ?>">
-          <div  style="border:3px solid #5cb85c; background-color:whitesmoke; border-radius:5px; padding:16px;" align="center">
-            <img src="in\upload\<?php echo $row["Image"]; ?>" class="img-responsive" /><br />
-
-            <h4 class="text-info"><?php echo $row["vName"]; ?><br>Rs<?php echo $row["fees"]; ?>  Per KM
-              <br>How May People can teverl:- <?php echo $row["howManyPeople"]; ?> </h4>          
-
-            <input type="hidden" name="hidden_name" value="<?php echo $row["vName"]; ?>" />
-
-            <input type="hidden" name="hidden_fees" value="<?php echo $row["fees"]; ?>" />
-<input type="hidden" name="hidden_people" value="<?php echo $row["howManyPeople"]; ?>" />
-
-            <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
-
-          </div>
-        </form>
-      </div>
-      <?php
-          }
-        }
-      ?>
-                <!--end search bar-->                                 
-           
-      
-            </div>  
-        </div>
-      </div>                </div></b></h5></center></div>
-
-</div>
-<div class="text-right">
-  
-    <a href="driver.php"><button type="button" class="btn btn-success">Driver</button> </a>
-         <a href="guide.php"> <button type="button" class="btn btn-success">Guide</button>  </a>         
-           <a href = "login.php"> <button type="button" class="btn btn-success">Check Out</button></a>
+ 
+<div class="col-40" align="center">
+              <div class="thumbnail" class="col-45">
+                      <center><b>
+      <form  style ="background-color: #E0ECF8;";  action= "./ploginBack.php" method="POST">
+               <center><div class="col-md-6 col-sm-6 alert-info"><br />
+                            <h3> Login </h3>
+                           
                     </div></center>
- <br />   </div>
-</div>
+              
+                    <div class="col-sm-12">
+                  <label class="control-label col-sm-4" for="email"><b>E-Mail</b></label>
+                   <div class="col-sm-10">
+                  <input type="text" placeholder="Enter E-Mail" name="email" required>
+                </div></div>
 
-</b></h5></center></div>
-<div class="container">
-<table><tr><td width="50%">
-
-    
-      <div>
-      <h2 align ="center">Rate About Transportation Service</h2>
-            <?php
-    
-$dbServername ="localhost";
-$dbUsername ="root";
-$dbPassword ="";
-$dbName ="ttgms";
-
-$conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
-
-$find_data = "select * from rate";
-$result = $conn -> query($find_data);
-while ($row = mysqli_fetch_assoc($result)) {
-  
-  $id = $row['id'];
-  $name = $row['name'];
-  $food = $row['food'];
-  $current_rating = $row['rating'];
-  $hits = $row['hits'];
-
-  echo "
-          <form action='rates.php' method='POST'>
-          $name:<select name='rating' class='form-control selcls'>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          
-          </select>
-           <div class='form-group'>
-          <input type='hidden' value='$food' name='food'>
-          </div>
-          <div>
-          <input type ='submit' value='Rate!' class='btn btn-info'> </div>Current Rating:";
-  echo round($current_rating, 3);
-  echo "
-
-
-          </form>
-
-          ";
-}
-?>
-        </div></td><td>
-      <div class="container">
-            <h2 align="center">Comment About Transportation Service</h2>
-          <br />
-
-           <form method="POST" id="comment_form">
-            <div class="form-group">
-              <input type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Enter Name" />
+ <div class="col-sm-10">
+                  <label  class="control-label col-sm-4" for="psw"><b>Password</b></label>
+                   <div class="col-sm-12">
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+                </div></div>
+                    <br>
+                          <div class="form-group"> 
+             <div class="col-sm-4"> 
+                  <button type="submit" class="btn btn-success btn-sm btn-block" name="submit" id="submit">Login</button>
+                  
+                </div>
             </div>
-            <div class="form-group">
-              <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Enter Comment" rows="5"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="hidden" name="comment_id" id="comment_id" value="0" />
-              <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" />
-            </div>
-          </form>
-          <span id="comment_message"></span>
-            <br />
-          <div id="display_comment"></div>
+                 <div class="form-group"> 
+             <div class="col-sm-4"> <label>
+                    Remember me
+                  </label>               
+                  <a href="sign.php" ><span> <button type="button" class="btn btn-success btn-sm btn-block"   >Register Now</button></span></a>
+                </div>
+
+</div><br /><br />            </form>
+          </center>
         </div>
-    </div></div></div></td></tr></table>
-</div></div>
 
-
+                      </div></div></div></div></div></div>  
 <footer>
-
+ 
     <div class="footer" id="footer">
  
         <div class="container">
@@ -491,6 +344,6 @@ while ($row = mysqli_fetch_assoc($result)) {
  
        </div>
 </footer>
-</div>
+
 </BODY>
 </HTML>

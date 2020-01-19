@@ -232,26 +232,26 @@ transform: scale(1.15);
             <div class="col-xs-6 col-md-3">
                 
                     <img src="img\package.jpg" width="250" height="200" alt="... " /><h6 align="center" style="color:#f79f81;">Family<br>2Days 5000LKR</h6>
-                    <a href="package_Booking.php"><button class="btn btn-secondary" type="button">Book</button></a>
+                    <a href="plogin.php"><button class="btn btn-secondary" type="button">Book</button></a>
                 
             </div></td><td>
              <div class="col-xs-6 col-md-3">
                 
                     <img src="img\package.jpg" width="250" height="200" alt="... " /><h6 align="center" style="color:#f79f81;">Friends<br>3 Days 6000LKR</h6>
-                    <a href="package_Booking.php"><button class="btn btn-secondary" type="button">Book</button></a>
+                    <a href="plogin.php"><button class="btn btn-secondary" type="button">Book</button></a>
                 
             </div></td><td>
              <div class="col-xs-6 col-md-3">
                 
                     <img src="img\package.jpg" width="250" height="200" alt="... " /><h6 align="center" style="color:#f79f81;">Couple<br>2 Days 3000LKR</h6>
-                    <a href="package_Booking.php"><button class="btn btn-secondary" type="button">Book</button></a>
+                    <a href="plogin.php"><button class="btn btn-secondary" type="button">Book</button></a>
                 
             </div>
              
 </td></tr></table>
       </div>
 <div class="text-right">         
-            <a class="nav-link" href="package_Booking.php"><button type="button" class="btn btn-success">Check Out</button></a>
+            <a class="nav-link" href="plogin.php"><button type="button" class="btn btn-success">Check Out</button></a>
                     </div></center>
     </div>
 </div>

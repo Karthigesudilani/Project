@@ -118,14 +118,11 @@ transform: scale(1.15);
 </HEAD>
 
 <BODY>
-<div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;">
-<div style="background-color: Gray;font-style:italic;">
-  <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
-</h5></center></div>
+<div style=" color: black; font-style:italic;">
+  <center><h3><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
+</h3></center></div>
 
-<!--Nav Bar-->	
+<!--Nav Bar-->  
 <div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
@@ -141,56 +138,75 @@ transform: scale(1.15);
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="add_transport.php">Transport</a>
+      <form action="add_transport.php" method="POST">                 
+                
+                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Transport" name="submit">
+                  
+             </form>
     </li>
         
 
-     <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
+ 
     
     <li class="nav-item">
-      <a class="nav-link" href="add_guide.php">Guide</a>
+      <form action="add_guide.php" method="POST">                 
+                
+                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Guide" name="submit">
+                  
+             </form>
+      
     </li>
 
-     <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
+   
  
      <li class="nav-item">
-      <a class="nav-link" href="add_driver.php">Driver</a>
+       <form action="add_driver.php" method="POST">                 
+                
+                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Driver" name="submit">
+                  
+             </form>
     </li>
   
-     <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
+   
     
      <li class="nav-item">
-      <a class="nav-link" href="add_package.php">Package</a>
+        <form action="add_package.php" method="POST">                 
+                
+                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Package" name="submit">
+                  
+             </form>
     </li>
    
      <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
   <li class="nav-item">
-      <a class="nav-link" href="add_newguide.php">New_Guide</a>
+    <form action="add_newguide.php" method="POST">                 
+                
+                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="New_Guide" name="submit">
+                  
+             </form>
+      
     </li>
-    
-    <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
-    
+ 
     
       <li class="nav-item">
-      <a class="nav-link" href="add_newdriver.php">New_Driver</a>
+        <form action="add_newdriver.php" method="POST">                 
+                
+                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="New_Driver" name="submit">
+                  
+             </form>
+     
     </li>
 
-     <li class="nav-item">
-      <a class="nav-link" href=""></a>
-    </li>
+
    
  <li class="nav-item" >
-      <a class="nav-link" href="add_cancelbooking.php">Cancel Booking</a>
+       <form action="add_cancelbooking.php" method="POST">                 
+                
+                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Cancel Booking" name="submit">
+                  
+             </form>
     </li>
 
      <li class="nav-item">
@@ -198,8 +214,30 @@ transform: scale(1.15);
     </li>
 
    <li class="nav-item" >
-      <a class="nav-link" href="add_Booikg.php">Booking</a>
+       <form action="add_Booikg.php" method="POST">                 
+                
+                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Booking" name="submit">
+                  
+             </form>
     </li>
+
+ <li class="nav-item" >
+       <form action="add_leavedriver.php" method="POST">                 
+                
+                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Driver_Leave" name="submit">
+                  
+             </form>
+    </li>
+
+
+     <li class="nav-item" >
+       <form action="add_leaveguide.php" method="POST">                 
+                
+                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Guide_Leave" name="submit">
+                  
+             </form>
+    </li>
+
  <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
@@ -214,37 +252,16 @@ transform: scale(1.15);
   </ul>
 </nav>
 </div>
-
 <br /><br />
 <center>
 <div style="background-color: #E0E6F8; width: 80% ">
   <h1> <u>Booking</u> </h1>
           <div class="col-sm-12">
-            <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST"> 
-                <table><tr><td>
-           
-                  <input style="border-color:grey;" class="form-control"  name="keyname" type="text" placeholder="Name" id="meal_name">
-                  
-           </td><td>
-                
-                  <input style="padding-top:5px;" class="btn btn-dark" type="submit" value="Search" name="submit">
-                  
-              </td>
-                
-                <td>
-                
-                  <input style="padding-top:5px;" class="btn btn-dark" type="submit" value="Veiw" name="submit">
-                  
-              </td>
-
-
-              </form>
-            <td>
-          </table>       
+            
           </div>
 
 
-                      
+                      <br /><br /><br />
           <div id="result">
             
 
@@ -256,9 +273,9 @@ transform: scale(1.15);
               <table class="table table-striped table-bordered" id="example" style="width: 95%;">
                 <thead>
                   <tr>
-                    <th>Booking ID</th>
-                    <th>User ID</th>
-                    <th>Guide ID</th>
+                    <th>Booking ID</th>                    
+                    <th>Full Name</th>
+                    <th>Guide Id</th>
                     <th>Driver ID</th>
                     <th>Vehicle ID</th> 
                     <th>Package ID</th>
@@ -277,7 +294,7 @@ $dbName ="ttgms";
 
 $conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
 
-                        $sql = "SELECT * FROM booking WHERE bId LIKE '%{$_POST["keyname"]}%' OR userMail LIKE '%{$_POST["keyname"]}%'";
+                        $sql = "SELECT * FROM booking";
 
                       $result = $conn -> query($sql);
 
@@ -293,11 +310,11 @@ $conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
 
                           echo "<tr>";
                               echo "<td>"; echo $row['bId'];  echo "</td>";
-                              echo "<td>"; echo $row['userId'];  echo "</td>";
+                              echo "<td>"; echo $row['fullName'];  echo "</td>";
                               echo "<td>"; echo $row['guideId'];  echo "</td>";
                               echo "<td>"; echo $row['driverId'];  echo "</td>";
                               echo "<td>"; echo $row['vId'];  echo "</td>";
-                              echo "<td>"; echo $row['packageId'];  echo "</td>";
+                              
                               echo "<td>"; echo $row['startDate'];  echo "</td>";
                               echo "<td>"; echo $row['endDate'];  echo "</td>";
                               echo "<td>"; echo $row['userMail'];  echo "</td>";
