@@ -343,6 +343,12 @@ Full Name :-
       Start Date :-
      <input class="w3-input w3-border" name="startDate" type="text" placeholder="Start Date"  id="startDate"></div>   
      <br />
+     <div class="form-group">
+          <label class="col-sm-3 control-label">Date of join</label>
+          <div class="col-sm-4">
+            <input type="text" name="jdate" class="input-group date form-control" date="" data-date-format="yyyy-mm-dd" placeholder="0000-00-00" required>
+          </div>
+        </div>
      
 <div class="w3-padding">
   End Date :-

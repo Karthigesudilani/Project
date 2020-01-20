@@ -276,7 +276,7 @@ transform: scale(1.15);
                        
                                                     </div>
                                                     <div class="w3-padding">
-     <input class="w3-input w3-border" name="amount" type="text" placeholder="Amount per KM"  id="amount"></div>      <br />
+     <input class="w3-input w3-border" name="fees" type="text" placeholder="Amount per KM"  id="fees"></div>      <br />
 <div class="w3-row-padding w3-margin-bottom">   
 <div class="w3-half">
 <input type="submit" class="w3-btn w3-green w3-block " name="meal_add" value="Add Transport">

@@ -273,8 +273,11 @@ transform: scale(1.15);
 </nav>
 </div>
 <center>
-<div style="background-color: #E0E6F8; width: 80% ">
-  <h1> <u>Guide</u> </h1>
+<div style="background-color: #E0E6F8; width: 50% ">
+    <center><div class="col-md-4 col-sm-4 alert-info">
+                           <br/> <h1><u>Guide</u></h1>
+                           
+                    </div>
                                
           <div id="result">
             
@@ -289,7 +292,7 @@ transform: scale(1.15);
           while($row = mysqli_fetch_array($result))
           {
         ?>
-        <div class="col-md-4">
+        <div class="col-md-8">
         <form method="post" action="guide.php?action=add&id=<?php echo $row["guideId"]; ?>">
           <div  style="border:3px solid #5cb85c; background-color:whitesmoke; border-radius:5px; padding:16px;" align="center">
             <img src="in\upload\<?php echo $row["Image"]; ?>" class="img-responsive" /><br />

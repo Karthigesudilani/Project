@@ -271,9 +271,9 @@ transform: scale(1.15);
 </nav>
 </div>
      <center>
-<div class="text-center" style="background-color: #E0E6F8; width: 80% ">
+<div class="text-center" style="background-color: #E0E6F8; width: 50% ">
                 	<center><div class="col-md-4 col-sm-4 alert-info">
-                           <br/> <h3> Driver</h3>
+                           <br/> <h1><u>Driver</u></h1>
                            
                     </div>
         
@@ -285,7 +285,7 @@ transform: scale(1.15);
           while($row = mysqli_fetch_array($result))
           {
         ?>
-        <div class="col-md-4">
+        <div class="col-md-8">
         <form method="post" action="driver.php?action=add&id=<?php echo $row["driverId"]; ?>">
           <div  style="border:3px solid #5cb85c; background-color:whitesmoke; border-radius:5px; padding:16px;" align="center">
             <img src="in\upload\<?php echo $row["Image"]; ?>" class="img-responsive" /><br />
@@ -297,7 +297,7 @@ transform: scale(1.15);
 
             <input type="hidden" name="hidden_price" value="<?php echo $row["fees"]; ?>" />
 
-
+<br />
             <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
 
           </div>
@@ -309,9 +309,10 @@ transform: scale(1.15);
       ?>
                 <!--end search bar-->                                 
            
-      
-
-
+  
+            </div>  
+        </div>
+      </div>                </div></b></h5></center></div>
 
 <div class="text-right">
 
