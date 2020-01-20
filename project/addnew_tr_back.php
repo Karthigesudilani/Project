@@ -24,7 +24,7 @@ $conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
 				$vName= $_POST['vName'];
 
 				$howManyPeople =$_POST['howManyPeople'];
-$fees =$_POST['fees'];
+$amount =$_POST['amount'];
     
         // Verify file extension
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
@@ -42,7 +42,7 @@ $fees =$_POST['fees'];
             } else{
                 move_uploaded_file($_FILES["photo"]["tmp_name"], "upload/" . $filename);
                 
-               $sql = "INSERT INTO vehicle (vId, vName,howManyPeople,Image,fees) VALUES('','$vName','$howManyPeople','$filename','$fees');";
+               $sql = "INSERT INTO vehicle (vId, vName,howManyPeople,Image,amount) VALUES('','$vName','$howManyPeople','$filename','$amount');";
 				echo $sql;
 			mysqli_query($conn,$sql);
 			 header("location:./add_transport.php");

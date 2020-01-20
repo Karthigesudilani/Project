@@ -233,10 +233,9 @@ transform: scale(1.15);
 						<th width="15%">Action</th>
 					</tr>
 					<?php
-          $total = 0;
 					if(!empty($_SESSION["vehicle"]))
 					{
-						
+						$total = 0;
 						foreach($_SESSION["vehicle"] as $keys => $values)
 						{
 					?>
@@ -253,11 +252,16 @@ transform: scale(1.15);
 						}
 					
 					}
-
+?><tr>
+            <td colspan="2" align="right">Sub Total</td>
+            <td align="right">Rs. <?php echo number_format($total, 2); ?></td>
+            
+          </tr><?php
 
           if(!empty($_SESSION["guide"]))
           {
-                      foreach($_SESSION["guide"] as $keys => $values)
+            $total = 0;
+            foreach($_SESSION["guide"] as $keys => $values)
             {
           ?>
           <tr>
@@ -270,14 +274,18 @@ transform: scale(1.15);
           <?php
              $total = $total + $values["fees"] ;
             }
+            ?><tr>
+            <td colspan="2" align="right">Sub Total</td>
+            <td align="right">Rs. <?php echo number_format($total, 2); ?></td>
             
+          </tr><?php
           
           }
 
 
           if(!empty($_SESSION["driver"]))
           {
-          
+            $total = 0;
             foreach($_SESSION["driver"] as $keys => $values)
             {
           ?>
@@ -292,15 +300,15 @@ transform: scale(1.15);
               $total = $total + $values["fees"] ;
             }
 
-          }
+          
 
 					?>
 				<tr>
-            <td colspan="2" align="right">Total</td>
+            <td colspan="2" align="right">Sub Total</td>
             <td align="right">Rs. <?php echo number_format($total, 2); ?></td>
             
           </tr>
-         
+          <?php   } ?>
             
         </table>
         </form>
@@ -309,7 +317,7 @@ transform: scale(1.15);
 			<div class="text-right">
   
       
-           <a href = "login.php"> <button type="button" class="btn btn-success">Check Out</button></a>
+           <a href = "CheckOutForm.php"> <button type="button" class="btn btn-success">Check Out</button></a>
                     </div></center>
  <br />   </div>
 </div>

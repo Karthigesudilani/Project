@@ -117,10 +117,7 @@ transform: scale(1.15);
 </style>
 </HEAD>
 <BODY>
-<div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;">
-<div style="background-color: Gray; color: black; font-style:italic;">
+<body style="background-color: white;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
 
@@ -229,36 +226,54 @@ transform: scale(1.15);
 <center>
 
       <table><tr><td>
-            <div class="col-xs-6 col-md-3">
+            <div class="col-xs-8 col-md-8">
                 
-                    <img src="img\package.jpg" width="250" height="200" alt="... " /><h6 align="center" style="color:#f79f81;">Family<br>2Days 5000LKR</h6>
-                    <a href="plogin.php"><button class="btn btn-secondary" type="button">Book</button></a>
+                    <h5 align="center" style="color:red;">Family<br></h5><img src="img\family.jpg" width="250" height="200" alt="... " /><br><br><h6 align="center" style="color:black;"><center>The tour will take you to the three main cultural sites but still you will remain the maximum experience of Sri Lankan cultural and heritage past. Itinerary is available to tailor made visitors by choice even add/remove extra night here or choose different hotels as prefer to the visitor.</center></h6><br><h5 align="center" style="color:red;">2Days 5000LKR</h5>
+                    <center><a href="package_Booking.php"><button class="btn btn-secondary" type="button">Book</center></button></a>
                 
-            </div></td><td>
-             <div class="col-xs-6 col-md-3">
+            </div></td><td><br><br>
+             <div class="col-xs-8 col-md-8">
                 
-                    <img src="img\package.jpg" width="250" height="200" alt="... " /><h6 align="center" style="color:#f79f81;">Friends<br>3 Days 6000LKR</h6>
-                    <a href="plogin.php"><button class="btn btn-secondary" type="button">Book</button></a>
+                    <h5 align="center" style="color:red;">Friend<br></h5><img src="img\friend.jpg" width="250" height="200" alt="... " /><br><br><h6 align="center" style="color:black;"><center>The tour organize with 4 nights and 5 days. This 4 nights you will be discovered the days back more than 5th century BC which made home to one of the oldest civilizations on the world. you will spot to explore the well planed cities, massive temples and monasteries, expansive reservoirs and much more.</center></h6> <br><h5 align="center" style="color:red;">3 Days 6000LKR</h5>
+                    <center><a href="package_Booking.php"><button class="btn btn-secondary" type="button">Book</center></button></a>
                 
-            </div></td><td>
-             <div class="col-xs-6 col-md-3">
+            </div></td><td><br><br>
+             <div class="col-xs-8 col-md-8">
                 
-                    <img src="img\package.jpg" width="250" height="200" alt="... " /><h6 align="center" style="color:#f79f81;">Couple<br>2 Days 3000LKR</h6>
-                    <a href="plogin.php"><button class="btn btn-secondary" type="button">Book</button></a>
+                    <h5 align="center" style="color:red;">Couple<br></h5><img src="img\couple.jpg" width="250" height="200" alt="... " /><br><br><h6 align="center" style="color:black;"><center>The tour organize with 4 nights and 5 days. This 4 nights you will be discovered the days back more than 5th century BC which made home to one of the oldest civilizations on the world. you will spot to explore the well planed cities, massive temples and monasteries, expansive reservoirs and much more.</center></h6> <br><h5 align="center" style="color:red;">2 Days 3000LKR</h5>
+                    <center><a href="package_Booking.php"><button class="btn btn-secondary" type="button">Book</center></button></a>
                 
-            </div>
-             
-</td></tr></table>
+            </div>         
+</td></tr>
+
+<tr><td><br>
+            <div class="col-xs-8 col-md-8">
+                
+                    <h5 align="center" style="color:red;">Seasonal<br></h5><img src="img\seasonal.jpg" width="250" height="200" alt="... " /><br><br><h6 align="center" style="color:black;"><center>The tour organize with 4 nights and 5 days. This 4 nights you will be discovered the days back more than 5th century BC which made home to one of the oldest civilizations on the world. you will spot to explore the well planed cities, massive temples and monasteries, expansive reservoirs and much more.</center></h6> <br><h5 align="center" style="color:red;">2Days 5000LKR</h5>
+                    <center><a href="package_Booking.php"><button class="btn btn-secondary" type="button">Book</center></button></a>
+                
+            </div></td><td><br><br>
+             <div class="col-xs-8 col-md-8">
+                
+                    <h5 align="center" style="color:red;">Luxury<br></h5><img src="img\luxury.jpg" width="250" height="200" alt="... " /><br><br><h6 align="center" style="color:black;"><center>The tour organize with 4 nights and 5 days. This 4 nights you will be discovered the days back more than 5th century BC which made home to one of the oldest civilizations on the world. you will spot to explore the well planed cities, massive temples and monasteries, expansive reservoirs and much more.</center></h6> <br><h5 align="center" style="color:red;">3 Days 6000LKR</h5>
+                    <center><a href="package_Booking.php"><button class="btn btn-secondary" type="button">Book</center></button></a>
+                
+            </div></td><td><br><br>
+             <div class="col-xs-8 col-md-8">
+                
+                    <h5 align="center" style="color:red;">Heritage<br></h5><img src="img\heritage.jpg" width="250" height="200" alt="... " /><br><br><h6 align="center" style="color:black;"><center>The tour organize with 4 nights and 5 days. This 4 nights you will be discovered the days back more than 5th century BC which made home to one of the oldest civilizations on the world. you will spot to explore the well planed cities, massive temples and monasteries, expansive reservoirs and much more.</center></h6> <br><h5 align="center" style="color:red;">2 Days 3000LKR</h5>
+                    <center><a href="package_Booking.php"><button class="btn btn-secondary" type="button">Book</center></button></a>
+                
+            </div>         
+</td></tr>
+</table>
       </div>
-<div class="text-right">         
-            <a class="nav-link" href="plogin.php"><button type="button" class="btn btn-success">Check Out</button></a>
-                    </div></center>
-    </div>
+
 </div>
 
 
 
-
+<br><br>
 
 <footer>
  <div class="footer" id="footer">
@@ -268,6 +283,7 @@ transform: scale(1.15);
             <div class="row">
  
                 <div class="col-lg-3  col-md-3 col-sm-5 col-xs-7">
+				<br>
  
                     <h3> Services </h3>
  
@@ -284,7 +300,7 @@ transform: scale(1.15);
  
                 </div>
  
-                <div class="col-lg-3  col-md-3 col-sm-5 col-xs-7">
+                <div class="col-lg-3  col-md-3 col-sm-5 col-xs-7"><br>
  
                     <h3> About </h3>
  
@@ -302,7 +318,7 @@ transform: scale(1.15);
  
                 </div>
  
-                <div class="col-lg-3  col-md-3 col-sm-5 col-xs-7">
+                <div class="col-lg-3  col-md-3 col-sm-5 col-xs-7"><br>
  
                     <h3> Contact </h3>
  
@@ -323,7 +339,7 @@ transform: scale(1.15);
  
                 </div>
  
-                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-7 ">
+                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-7 "><br>
  
                     <h3> Rating  </h3>
  
@@ -343,5 +359,5 @@ transform: scale(1.15);
        </div>
 </footer>
 </div>
-</BODY>
+</body>
 </HTML>

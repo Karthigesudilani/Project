@@ -47,7 +47,7 @@
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
-  background-color :black;
+  background-color :white;
   flex-wrap: nowrap;
 }
 
@@ -117,10 +117,8 @@ transform: scale(1.15);
 </style>
 </HEAD>
 
-<BODY>
-<div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;">
+<body style="background-color: white;">
+
 <div style="background-color: Gray;font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
@@ -222,27 +220,47 @@ transform: scale(1.15);
                           <br />  <h3> Tourist Attraction Places in Badulla</h3>
                            
                     </div></center>
+<a class="weatherwidget-io" href="https://forecast7.com/en/6d9981d05/badulla/" data-label_1="Dunhida" data-label_2="WEATHER" data-theme="original" >BADULLA WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
 
 <div class="container">
     <div class="panel panel-default">
 <br>
-<h3 style="color:gray"> Dova ancient rock temple </h3>
-<p style="color:white"> 
+<h3 style="color:#1c2833 "> Dova ancient rock temple </h3>
+<p style="color:black"> 
 Dova ancient rock temple which is located in Dova, Ella area in Badulla district can be identified as one of the foremost rock temples in Uva province with higher historical value. It is facing to Badulla- Bandarawela main road; hence one who travels from Bandarawela can straightforwardly reach the place after passing about 6 km from the main road. Temple is located on top of a slope of a mountain and bounded by "Badulu Oya" in right hand side.
  </p>
-<p style="color:white"> 
+<p style="color:black"> 
 Dowa temple is believed to be constructed during King Walagamba's era. Ancient legends reveal this cave as a secret hiding places for the king during enemy attacks. Later he instructed a person called "Kumbaltissa" to construct a temple here as a Buddhist monastery. Today many travelers are attracted to this place because of its utmost archaeological value plus charm and beautiful environment surrounded by.
  </p>
- <p style="color:white"> 
+ <p style="color:black"> 
 Once entered the temple at the outset, you will observe a new Stupa and other temple buildings which were constructed newly. When move down further about 100 m along a stairway, it can be eye witnessed to the ancient boo tree and Stupa , the stone statue and famous "Gal Vihara Geya" which resembles a gallery of elegant ancient art works .
- The Vihara geya is assembled inside the rock cave which is about 10 ft in width, 12 ft in height and 30 ft in length. This cave is under a leveled inclined rock and its opening is lower than the rear part, which is an uncommon natural formation. The Vihara geya is full of Buddha and Gods statues and frescos. It consists of three main parts where first part holds a recently build "Makara thorana" and lots of colorful paintings.</p>
+ The Vihara geya is assembled inside the rock cave which is about 10 ft in width, 12 ft in height and 30 ft in length. This cave is under a leveled inclined rock and its opening is lower than the rear part, which is an uncommon natural formation. The Vihara geya is full of Buddha and Gods statues and frescos. It consists of three main parts where first part holds a recently build "Makara thorana" and lots of colorful paintings.
+ </p>
+					<div class="text-center">
+                	<center><div class="col-md-4 col-sm-4 alert-info">
+                           
+                    </div></center>
+           <div class="div1">
+		<div class="image">
+<div class="img"><img src="img\dowa1.jpg" width="100% height=90%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\dowa2.jpg" width="100% height=90%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\dowa3.jpg" width="100% height=100%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\dowa4.jpg" width="100% height=110%"></div>
+</div></div>
+ 
 <h3> Map</h3>
  <div id="map"></div>
     <script>
       function initMap() {
-        var uluru = {lat: 7.0170667, lng: 81.0623103};
+        var uluru = {lat:6.8563, lng: 81.0222};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
+          zoom: 15,
           center: uluru
         });
 
@@ -258,36 +276,40 @@ Once entered the temple at the outset, you will observe a new Stupa and other te
     </script>
 </div></div>
 <br><br>
+
+
+ <h3><center>Go to other places</center></h3>
+					<div class="text-center">
+                	<center><div class="col-md-4 col-sm-4 alert-info">                          
+                    </div></center>
 <div class="div1">
     <div class="image">
-<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place3.php"><img src="img\Ella.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></div></div>
+<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place3.php"><img src="img\ella1.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></a></div>
+</div><div class="image">
 
     </div>
 
-</div></div>
+
 
 
 
 
 </div></b></h5></center></div>
-<a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="Dova ancient rock temple" data-label_2="WEATHER" data-theme="original" >Dova ancient rock temple WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
+
 
 <footer>
 
@@ -376,4 +398,4 @@ Once entered the temple at the outset, you will observe a new Stupa and other te
 
 
 
-</h5></center></div></BODY></HTML>
+</h5></center></div></body></HTML>

@@ -174,7 +174,7 @@ transform: scale(1.15);
 </HEAD>
 
 <BODY>
-<div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
+<div style = "background-image:url('mountain.jpg');  background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;">
 <div style="background-color: Gray; color: black; font-style:italic;">
@@ -274,12 +274,8 @@ transform: scale(1.15);
 </div>
      
 <center>
-<div style="background-color: #E0E6F8; width: 50% ">
-     <center><div class="col-md-4 col-sm-4 alert-info">
-                           <br/> <h1><u>Transport</u></h1>
-                           
-                    </div>
-                    
+<div style="width: 80% ">
+  <h1> <u>Transport</u> </h1>
           <div class="col-sm-12">
    
 
@@ -298,20 +294,20 @@ transform: scale(1.15);
           while($row = mysqli_fetch_array($result))
           {
         ?>
-        <div class="col-md-8">
-        <form method="post" action="Transportation.php?action=add&id=<?php echo $row["vId"]; ?>">
-          <div  style="border:3px solid #5cb85c; background-color:whitesmoke; border-radius:5px; padding:16px;" align="center">
-            <img src="in\upload\<?php echo $row["Image"]; ?>" class="img-responsive" /><br />
+        <div class="col-md-10">
+				<form method="post" action="Transportation.php?action=add&id=<?php echo $row["id"]; ?>">
+					<div style="background-color:#2E8B57; border-radius:5px; padding:16px;" align="center" >
+						<table style="width:100%"><tr><th><img src="img/<?php echo $row["image"]; ?>" class="img-responsive" /></th>
 
-            <h4 class="text-info"><?php echo $row["vName"]; ?><br>Rs<?php echo $row["fees"]; ?>  Per KM
-              <br>How May People can teverl:- <?php echo $row["howManyPeople"]; ?> </h4>          
+            <th><h5 class="text-info" align="left" ><font color="white">Type: <?php echo $row["vName"]; ?><br><br>LKR <?php echo $row["pricePerKm"]; ?> Per KM
+              <br><br>How May People can travel: <?php echo $row["howManyPeople"]; ?> </font></th></tr></table></h5>          
 
             <input type="hidden" name="hidden_name" value="<?php echo $row["vName"]; ?>" />
 
-            <input type="hidden" name="hidden_fees" value="<?php echo $row["fees"]; ?>" />
+            <input type="hidden" name="hidden_fees" value="<?php echo $row["pricePerKm"]; ?>" />
 <input type="hidden" name="hidden_people" value="<?php echo $row["howManyPeople"]; ?>" />
 
-            <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
+            <div class="text-right"><input type="submit" name="add_to_cart" style="margin-top:5px;"  class="btn btn-success" value="Add to Cart" /></div>
 
           </div>
         </form>
@@ -332,84 +328,14 @@ transform: scale(1.15);
   
     <a href="driver.php"><button type="button" class="btn btn-success">Driver</button> </a>
          <a href="guide.php"> <button type="button" class="btn btn-success">Guide</button>  </a>         
-           <a href = "login.php"> <button type="button" class="btn btn-success">Check Out</button></a>
+           <a href = "CheckOutForm.php"> <button type="button" class="btn btn-success">Check Out</button></a>
                     </div></center>
  <br />   </div>
 </div>
 
 </b></h5></center></div>
-<div class="container">
-<table><tr><td width="50%">
-
-    
-      <div>
-      <h2 align ="center">Rate About Transportation Service</h2>
-            <?php
-    
-$dbServername ="localhost";
-$dbUsername ="root";
-$dbPassword ="";
-$dbName ="ttgms";
-
-$conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
-
-$find_data = "select * from rate";
-$result = $conn -> query($find_data);
-while ($row = mysqli_fetch_assoc($result)) {
-  
-  $id = $row['id'];
-  $name = $row['name'];
-  $food = $row['food'];
-  $current_rating = $row['rating'];
-  $hits = $row['hits'];
-
-  echo "
-          <form action='rates.php' method='POST'>
-          $name:<select name='rating' class='form-control selcls'>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          
-          </select>
-           <div class='form-group'>
-          <input type='hidden' value='$food' name='food'>
-          </div>
-          <div>
-          <input type ='submit' value='Rate!' class='btn btn-info'> </div>Current Rating:";
-  echo round($current_rating, 3);
-  echo "
 
 
-          </form>
-
-          ";
-}
-?>
-        </div></td><td>
-      <div class="container">
-            <h2 align="center">Comment About Transportation Service</h2>
-          <br />
-
-           <form method="POST" id="comment_form">
-            <div class="form-group">
-              <input type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Enter Name" />
-            </div>
-            <div class="form-group">
-              <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Enter Comment" rows="5"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="hidden" name="comment_id" id="comment_id" value="0" />
-              <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" />
-            </div>
-          </form>
-          <span id="comment_message"></span>
-            <br />
-          <div id="display_comment"></div>
-        </div>
-    </div></div></div></td></tr></table>
-</div></div>
 
 
 <footer>

@@ -47,7 +47,7 @@
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
-  background-color :black;
+  background-color :white;
   flex-wrap: nowrap;
 }
 
@@ -117,10 +117,8 @@ transform: scale(1.15);
 </style>
 </HEAD>
 
-<BODY>
-<div style = "background-image:url('Ella.jpg');  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;">
+<body style="background-color: white;">
+
 <div style="background-color: Gray;font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
@@ -222,20 +220,29 @@ transform: scale(1.15);
                           <br />  <h3> Tourist Attraction Places in Badulla</h3>
                            
                     </div></center>
+					
+<a class="weatherwidget-io" href="https://forecast7.com/en/6d9981d05/badulla/" data-label_1="Ella Rock" data-label_2="WEATHER" data-theme="original" >BADULLA WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
 
 <div class="container">
     <div class="panel panel-default">
 <br>
-<h3 style="color:gray"> Ella Rock</h3>
-<p style="color:white"> 
+<video width="600" controls>
+  <source src="SRI LANKA - ELLA - TOURIST ATTRACTIONS.mp4" type="video/mp4">
+  
+</video><br><br>
+<h3 style="color:#1c2833 "> Ella Rock</h3>
+<p style="color:black"> 
 If you love living green, then Ella is obviously a place to visit. Ella Rock is one of the place which proves it.
 Trekkers would love the place. It’s bit tiring to do the hiking. But it is definitely worth it. Once you got to the summit you will realize why we said so. The panoramic views it provides with mist and cloud covering the area, especially in the early mornings and the late evenings are something you should witness and that would suffice enough to say that you visited Ella.
 Total time for climbing up and down is 4 hours. Yes, sounds like a long journey. But the way up there is with full of diversity. If you are starting form Ella train station, you would enjoy the rail walk, and soon as you started climbing up, you will be passing a waterfall, the rubber tree forest and tea plantations.
 </p>
-<p style="color:white"> 
+<p style="color:black"> 
 On a rainy day, it can be slippery, so better be cautious with what you wear for the journey. Wear something suitable for a hiking and towards the end of the hike, route will get bit harder with the steep, still manageable.
  </p>
- <p style="color:white"> 
+ <p style="color:black"> 
  It has become to go-to town in the hill country for tourists and as a result has a reasonably well-established tourism-orientated economy. For example, there is espresso coffee and fish and chips on offer, as well as lounge/backpacker -style bars aimed solely at the visitor. Unfortunately there is not much more than the touristic infrastructure which means no local life.
 
 The recent push in popularity also means most things you get here are really expensive.
@@ -248,11 +255,27 @@ There's not much to do in Ella itself, with a handful of small shops and only a 
 
 Ella has a small post office and one bank (Bank of Ceylon) with an ATM. Track bashers (rail enthusiasts) should particularly enjoy the line to Badulla, where at the village of Demodara it does a 360 degree loop before crossing over itself.
  </p>
+ 
+ <div class="text-center">
+                	<center><div class="col-md-4 col-sm-4 alert-info">
+                           
+                    </div></center>
+           <div class="div1">
+		<div class="image">
+<div class="img"><img src="img\ella13.jpg" width="100% height=90%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\ella2.jpg" width="100% height=90%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\ella3.jpg" width="100% height=100%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\ella4.jpg" width="100% height=110%"></div>
+</div></div>
+ 
 <h3> Map</h3>
  <div id="map"></div>
     <script>
       function initMap() {
-        var uluru = {lat: 7.0170667, lng: 81.0623103};
+        var uluru = {lat: 6.8667, lng: 81.0466};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
           center: uluru
@@ -270,36 +293,35 @@ Ella has a small post office and one bank (Bank of Ceylon) with an ATM. Track ba
     </script>
 </div></div>
 <br><br>
+
+<h3><center>Go to other places</center></h3>
+					<div class="text-center">
+                	<center><div class="col-md-4 col-sm-4 alert-info">                          
+                    </div></center>
 <div class="div1">
     <div class="image">
-<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place3.php"><img src="img\Ella.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></div></div>
+<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place3.php"><img src="img\ella1.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></a></div>
+</div><div class="image">
 
     </div>
 
-</div></div>
-
-
-
 
 </div></b></h5></center></div>
-<a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="Ella Rock" data-label_2="WEATHER" data-theme="original" >Ella Rock WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
+
 
 <footer>
 
@@ -388,4 +410,4 @@ Ella has a small post office and one bank (Bank of Ceylon) with an ATM. Track ba
 
 
 
-</h5></center></div></BODY></HTML>
+</h5></center></div></body></HTML>

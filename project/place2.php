@@ -47,7 +47,7 @@
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
-  background-color :black;
+  background-color :white;
   flex-wrap: nowrap;
 }
 
@@ -117,10 +117,8 @@ transform: scale(1.15);
 </style>
 </HEAD>
 
-<BODY>
-<div style = "background-image:url('Muthiyanganaya.png');  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;">
+<body style="background-color: white;">
+
 <div style="background-color: Gray;font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
@@ -222,25 +220,48 @@ transform: scale(1.15);
                           <br />  <h3> Tourist Attraction Places in Badulla</h3>
                            
                     </div></center>
-
+<a class="weatherwidget-io" href="https://forecast7.com/en/6d9981d05/badulla/" data-label_1="Muthiyangana Temple" data-label_2="WEATHER" data-theme="original" >BADULLA WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+					
+					
 <div class="container">
     <div class="panel panel-default">
 <br>
-<h3 style="color:gray"> Muthiyangana Temple</h3>
-<p style="color:white"> 
+<h3 style="color:#1c2833 "> Muthiyangana Temple</h3>
+<p style="color:black"> 
  Muthiyanganaya Raja Maha Viharaya lies in the centre of the city of Badulla. The History of this temple goes back to the time of Buddha but this area around Badulla (especially Uva Province) goes way back in to the time of 19th -18th century BCE. Emperor Rawana was ruling this country with Badulla as the capital. It is also believed that the War of Rama and Rawana took place in this area. There are many places and names which identify this area as one of Rawana’s capitals; Seetha Eliya, Seetha Kotuwa, and Rawana Ella as described in Ramayana. It is said that the Rawana finally lost the war and his defector brother Vibishana took the capital to Kelaniya and the Uva gradually got lost in history until the 5th century. </p>
-<p style="color:white">
+<p style="color:black">
 The Buddha and 500 Arhants visited this Island for the third time on the invitation of Naga King Maniakkhitha to Kelaniya. On that visit, Buddha came to Badulla on the invitation of King Indaka (now elevated to the Deity status), ruler of the Namunukula Mountain Range. King Indaka built a Stupa enshrining some hair and Mukthaka Dathu (drops of sweat turned in to pearls) of the Buddha on the location where Buddha made his sermons. This is the birth of the Muthiyanganaya Stupa. Since then this Stupa and the temple has been expanded, reconstructed and renovated by many kings.</p>
-<p style="color:white"> 
+<p style="color:black"> 
 The `Thorana’ of a unique design of six levels at the entrance of the temple is of an unknown period. First level includes the main entrance and above it on the second level is a typical Makara (dragon) Head. On the sides of the head are two guard figures and at the corners are two lion figures. On the third level there are two `Vamana’ figures and at the edge two animals probably lions. These figures are not as clear as the lion figures on the second level. On the centre of the third level is a high stand which goes right up to the fourth level on it are two bulls and the special features of these bulls are that they are decorated and have large humps. Such bulls are a feature of Hinduism and this feature indicates some influence of Hinduism in the making of this structure. Lastly and on top of the fifth level is a seated Buddha statue. The fifth is dedicated to the Buddha statue. The peacocks at the sixth level complete the outline of the k structure. At the entrance is a colourful `Makara Thorana’. Right above the entrance and below the dragon head is a P figure of Maitre Bodhisattva. On the right hand side of the Image house is a statue of Deity Indaka, the protector of the Muthiyanganaya Holy Ground and the Namunukula Mountain Range. On the right is the statue of Maitre Bodhisattva. k. Passing the Image House you come to the holiest structure of the temple, the Stupa which enshrines the hair and the Mukthaka Dathu of Buddha. The initial stupa built by the Deity Indaka in the 5th century BCE has been enlarged by e King Devanampiyatissa (250-210 BCE) of Anuradhapura Era.
-</p><p style="color:white">
+</p><p style="color:black">
 Hence Randenigala ,Victoria and Rantambe are identified as the three main water valleys down sided from the Dunhinda Water fall, apart from being a natural water resource it has been a relaxation for the tourists.
 </p>
+
+          
+          	<div class="text-center">
+                	<center><div class="col-md-4 col-sm-4 alert-info">
+                           
+                    </div></center>
+           <div class="div1">
+		<div class="image">
+<div class="img"><img src="img\m1.jpg" width="100% height=90%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\m2.jpg" width="100% height=90%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\m3.png" width="100% height=100%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\m4.jpg" width="100% height=110%"></div>
+</div></div>
+
+
 <h3> Map</h3>
  <div id="map"></div>
     <script>
       function initMap() {
-        var uluru = {lat: 7.0170667, lng: 81.0623103};
+        var uluru = {lat: 6.9842, lng: 81.0614};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
           center: uluru
@@ -258,37 +279,34 @@ Hence Randenigala ,Victoria and Rantambe are identified as the three main water 
     </script>
 </div></div>
 <br><br>
-<div class="div1">
+<h3><center>Go to other places</center></h3>
+					<div class="text-center">
+                	<center><div class="col-md-4 col-sm-4 alert-info">                          
+                    </div></center>
+	<div class="div1">
     <div class="image">
-<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place3.php"><img src="img\Ella.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></div></div>
-
+<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place3.php"><img src="img\ella1.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></a></div>
+</div><div class="image">
 
     </div>
 
-</div></div>
-
-
-
 
 </div></b></h5></center></div>
-<a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="Muthiyangana Temple" data-label_2="WEATHER" data-theme="original" >Muthiyangana Temple WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
+
 
 <footer>
 
@@ -377,4 +395,4 @@ Hence Randenigala ,Victoria and Rantambe are identified as the three main water 
 
 
 
-</h5></center></div></BODY></HTML>
+</h5></center></div></body></HTML>

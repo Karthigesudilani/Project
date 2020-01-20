@@ -48,7 +48,7 @@
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
-  background-color :black;
+  background-color :white;
   flex-wrap: nowrap;
 }
 
@@ -216,9 +216,7 @@ transform: scale(1.15);
   </ul>
 </nav>
 </div>
-<div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;"><div style = "background-image:url('new2.jpg');  background-repeat: no-repeat;
+<div style = "background-image:url('new2.jpg');  background-repeat: no-repeat;
 
   background-attachment: scroll;  
   background-size: 100%50%;">
@@ -266,15 +264,15 @@ transform: scale(1.15);
     <!--SERVICES SECTION-->
 	
           
-							<body style="background-color: #FADBD8;">
+							<body style="background-color: white;">
                             <h3 class="full-width" style="color:black"> <div class="wrap">Our Service</div></h3>
                            
                     </center>
                 	<table>
                 		<tr>
                 			<td style="padding:30px">
-                    <div class="col-md-11 col-sm- alert-success">
-                            <h4 style="color:black">Transport</h4>
+                    <div class="col-md-11 col-sm-11 alert-success">
+                            <h4 style="color:black">Driver</h4>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
@@ -285,7 +283,7 @@ transform: scale(1.15);
                 </td>
                 <td style="padding:30px">
                     <div class="col-md-11 col-sm-11 alert-success">
-                            <h4 style="color:black"> Guide </h4>
+                            <h4 style="color:black">Provide Places Information </h4>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
@@ -353,14 +351,14 @@ transform: scale(1.15);
                     </div></center>
            <div class="div1">
 		<div class="image">
-<div class="img"><img src="img\dr1.jpg" width="100%" height="40%"></div>
+<div class="img"><img src="img\dr1.jpg" width="100%" height="100%"></div>
 </div><div class="image">
-<div class="img"><img src="img\dr2.jpg" width="100%" height="40%"></div>
+<div class="img"><img src="img\dr2.jpg" width="100%" height="100%"></div>
 </div><div class="image">
-<div class="img"><img src="img\dr3.jpg" width="100%" height="40%"></div>
+<div class="img"><img src="img\dr3.jpg" width="100%" height="100%"></div>
 </div><div class="image">
-<div class="img"><img src="img\driver.jpg" width="100%" height="40%"></div>
-</div></div>
+<div class="img"><img src="img\driver.jpg" width="100%" height="100%"></div>
+</div></div><br><br>
 
   <a class="nav-link" href="driver.php"><button type="button" class="btn btn-success" ><center>Start Booking For Driver</button></a>
  </center></div>   
@@ -375,13 +373,13 @@ transform: scale(1.15);
                     </div></center>
            <div class="div1">
 		<div class="image">
-<div class="img"><img src="img\guu.jpg" width="100%" height="40%"></div>
+<div class="img"><img src="img\guu.jpg" width="100%" height="70%"></div>
 </div><div class="image">
-<div class="img"><img src="img\gu3.jpg" width="100%" height="40%"></div>
+<div class="img"><img src="img\gu3.jpg" width="100%" height="70%"></div>
 </div><div class="image">
-<div class="img"><img src="img\gu6.jpg" width="100%" height="40%"></div>
+<div class="img"><img src="img\gu6.jpg" width="100%" height="70%"></div>
 </div><div class="image">
-<div class="img"><img src="img\gu5.jpg" width="100%" height="40%"></div>
+<div class="img"><img src="img\gu5.jpg" width="100%" height="70%"></div>
 </div></div>
 
   <a class="nav-link" href="Transportation.php"><button type="button" class="btn btn-success"><center>Start Booking For Guide</button></a>

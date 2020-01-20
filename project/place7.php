@@ -47,7 +47,7 @@
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
-  background-color :black;
+  background-color :white;
   flex-wrap: nowrap;
 }
 
@@ -117,10 +117,8 @@ transform: scale(1.15);
 </style>
 </HEAD>
 
-<BODY>
-<div style = "background-image:url('Ninearch.jpg');  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;">
+<body style="background-color: white;">
+
 <div style="background-color: Gray;font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
@@ -222,32 +220,53 @@ transform: scale(1.15);
                           <br />  <h3> Tourist Attraction Places in Badulla</h3>
                            
                     </div></center>
+<a class="weatherwidget-io" href="https://forecast7.com/en/6d9981d05/badulla/" data-label_1="Dunhida" data-label_2="WEATHER" data-theme="original" >BADULLA WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
 
 <div class="container">
     <div class="panel panel-default">
 <br>
-<h3 style="color:gray"> Nine Arch Bridge In Demodara </h3>
-<p style="color:white"> 
+<h3 style="color:#1c2833 "> Nine Arch Bridge In Demodara </h3>
+<p style="color:black"> 
 The Nine Arch Bridge in Ella is on the Demodara loop and spans 91 meters at a height of 24m. The beautiful nine arches make it a very picturesque spot especially as it is located in a dense jungle and agricultural setting. Behind the railway, a forest is booming and below, tea leaves are being cultivated.
  </p>
-<p style="color:white"> 
+<p style="color:black"> 
 				Train tours in the beautiful uplands of Sri Lanka are rated as some of the best train tours in the world. The grand Nine Arch Bridge, also known as The Bridge In The Sky, is a glorious man-made masterpiece, located in the ‘hill country’ of Ella, Sri Lanka.
 
 The magnificent Nine Arch Bridge, located between Ella and Demodara station is one of the awe-inspiring engineering marvels of the early 20th century. It definitely is one of the many reasons behind the above-mentioned recognition of the train tours in Sri Lanka. The surrounding area has seen a steady increase of tourism due to the bridge’s architectural ingenuity and the beautiful greenery in the nearby hillsides.
  </p>
- <p style="color:white"> 
+ <p style="color:black"> 
 Built 3,100m above sea level, among the peaks of the Central Highlands, the Nine Arches forms a crossing between the Demodara and Ella Railway stations. This bridge, which is almost 100 years old, has been built with blocks of stone and cement without any strengthening iron or concrete. The giant arches take the bridge on a curved path to link to mountains. The bridge was commissioned in 1921 under the British Government.
  According to past stories, the bridge was built with the help of a man called Appuhami who was a famed traditional drummer and devil dancer in the area. One day, while returning home gloomily as he lost a competition, Appuhami was seen by a British official. The officer was extremely frightened by the devilish vision (Appuhami was still in his dance costume) at the beginning, but soon became quite friendly with Appuhami.. Learning that the foreigner was in his area to construct a railway; Appuhami assisted him by supplying him with labour from the local villages.
 </p>
- <p style="color:white">
-But things did not go smoothly with the railway construction. They found that they were unable to bridge a large gap between two hills; as there was a marsh in the valley in between. It was not possible to create firm fixing, due to the marshy ground. On learning this, Appuhami requested to take over the bridge project. While he was rejected initially, they agreed later as he had gained their trust with his assistance and friendship. As the story goes, Appuhami started working on the bridge in 1913. He solved the issue of the unstable ground by toppling giant rocks into the space, until a firm bed of rocks was formed. He then created the bridge’s brick columns over this bed and continued with the construction of the bridge.</p>
+ <p style="color:black">
+But things did not go smoothly with the railway construction. They found that they were unable to bridge a large gap between two hills; as there was a marsh in the valley in between. It was not possible to create firm fixing, due to the marshy ground. On learning this, Appuhami requested to take over the bridge project. While he was rejected initially, they agreed later as he had gained their trust with his assistance and friendship. As the story goes, Appuhami started working on the bridge in 1913. He solved the issue of the unstable ground by toppling giant rocks into the space, until a firm bed of rocks was formed. He then created the bridge’s brick columns over this bed and continued with the construction of the bridge.
+</p>
+					<div class="text-center">
+                	<center><div class="col-md-4 col-sm-4 alert-info">
+                           
+                    </div></center>
+           <div class="div1">
+		<div class="image">
+<div class="img"><img src="img\nine1.png" width="100% height=90%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\nine2.jpg" width="100% height=90%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\nine3.jpg" width="100% height=100%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\nine4.jpg" width="100% height=110%"></div>
+</div></div>
+
 <h3> Map</h3>
  <div id="map"></div>
     <script>
       function initMap() {
-        var uluru = {lat: 7.0170667, lng: 81.0623103};
+        var uluru = {lat:6.8768, lng: 81.0608};
+
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
+          zoom: 15,
           center: uluru
         });
 
@@ -263,36 +282,39 @@ But things did not go smoothly with the railway construction. They found that th
     </script>
 </div></div>
 <br><br>
+
+
+<h3><center>Go to other places</center></h3>
+					<div class="text-center">
+                	<center><div class="col-md-4 col-sm-4 alert-info">                          
+                    </div></center>
 <div class="div1">
     <div class="image">
-<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place3.php"><img src="img\Ella.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></div></div>
+<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place3.php"><img src="img\ella1.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></a></div>
+</div><div class="image">
 
     </div>
 
-</div></div>
 
 
 
 
 </div></b></h5></center></div>
-<a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="Nine Arch Bridge In Demodara" data-label_2="WEATHER" data-theme="original" >Nine Arch Bridge In Demodara WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
+
 
 <footer>
 
@@ -381,4 +403,4 @@ But things did not go smoothly with the railway construction. They found that th
 
 
 
-</h5></center></div></BODY></HTML>
+</h5></center></div></body></HTML>

@@ -47,7 +47,7 @@
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
-  background-color :black;
+  background-color :white;
   flex-wrap: nowrap;
 }
 
@@ -117,11 +117,9 @@ transform: scale(1.15);
 </style>
 </HEAD>
 
-<BODY>
-<div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;">
-<div style="background-color: Gray;font-style:italic;">
+<body style="background-color: white;">
+
+<div style="background-color:white;font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
 
@@ -175,7 +173,7 @@ transform: scale(1.15);
   
     
     <li class="nav-item">
-      <a class="nav-link active" href="places.php">Tourist Attraction Places</a>
+      <a class="nav-link" href="places.php">Tourist Attraction Places</a>
     </li>
   
     <li class="nav-item">
@@ -200,7 +198,7 @@ transform: scale(1.15);
     </li>
 
    <li class="nav-item" >
-      <a class="nav-link" href="shopping.php"><img src="img\add.png" /></a>
+      <a class="nav-link" href=""><img src="img\add.png" /></a>
     </li>
  <li class="nav-item">
       <a class="nav-link" href=""></a>
@@ -209,40 +207,52 @@ transform: scale(1.15);
       <a class="nav-link" href=""></a>
     </li>
     <li class="nav-item" >
-  <a class="nav-link" href="login.php"><img src="img\log.png" /></a>
+  <a class="nav-link" href=""><img src="img\log.png" /></a>
     </li>
     
     </li>
   </ul>
 </nav>
-                 <div class="text-center">
+</div>
+    
+                <div class="text-center">
                 	<center><div class="col-md-6 col-sm-6 alert-info">
-                           <br /> <h3>Tourist Attraction Places in Badulla</h3>
+                          <br />  <h3> Tourist Attraction Places in Badulla</h3>
                            
                     </div></center>
-<div class ="container">
-<div class="div1">
-    <div class="image">
-<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place3.php"><img src="img\Ella.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></div></div>
-
-    </div>
 
 
-</div></div></b></h5></center></div><br>
+					<p><center>
+					Badulla District belong to the Hill country of Sri Lanka and rich with many tourist and religious attractions for both local and foreign Visitors. Number of famous waterfalls such as Babarakands; the highest in Sri Lanka add colors to its natural beauty. The sacred Muthyangana Rajamaha Vihara, located in Badulla Town is one of the prominent Buddhist attraction in the region.
+
+The District of Badulla governs under Uva Province of Sri Lanka. This district extent over 2861 square km( 2866100 Hectares) of land and according to 2011 statistics, the population of Badulla District is 886,000. Badulla is an agricultural district and tea is the main commercial crop. You can see many cascading tea gardens by the roadside. Paddy and vegetables also cultivated in large scale
+</p></center>
+           <div class="div1">
+		<div class="image">
+<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div>
+	</div><div class="image">
+<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></a></div>
+	</div><div class="image">
+<div class="img"><a class="nav-link" href="place3.php"><img src="img\ella1.jpg" width="100%" ></a></div>
+	</div><div class="image">
+<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></a></div>
+	</div><div class="image">
+<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></a></div>
+	</div><div class="image">
+<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></a></div>
+	</div><div class="image">
+<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></a></div>
+	</div><div class="image">
+<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></a></div>
+	</div><div class="image">
+</div>
+
+
+
+
+</div></b></h5></center></div>
+
+
 <footer>
 
  
@@ -326,6 +336,8 @@ transform: scale(1.15);
     </div>
  
        </div>
-</footer></div>
+</footer></BODY></HTML>
 
-</BODY></HTML>
+
+
+</h5></center></div></body></HTML>

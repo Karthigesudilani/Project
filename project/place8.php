@@ -47,7 +47,7 @@
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
-  background-color :black;
+  background-color :white;
   flex-wrap: nowrap;
 }
 
@@ -117,10 +117,8 @@ transform: scale(1.15);
 </style>
 </HEAD>
 
-<BODY>
-<div style = "background-image:url('namunukul.jpg');  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;">
+<body style="background-color: white;">
+
 <div style="background-color: Gray;font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
@@ -222,25 +220,44 @@ transform: scale(1.15);
                           <br />  <h3> Tourist Attraction Places in Badulla</h3>
                            
                     </div></center>
+<a class="weatherwidget-io" href="https://forecast7.com/en/6d9981d05/badulla/" data-label_1="Dunhida" data-label_2="WEATHER" data-theme="original" >BADULLA WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
 
 <div class="container">
     <div class="panel panel-default">
 <br>
-<h3 style="color:gray"> Namunukula</h3>
-<p style="color:white"> 
+<h3 style="color:#1c2833 "> Namunukula</h3>
+<p style="color:black"> 
 Namunukula is one of the most popular hiking spots of Sri Lanka. It is best hiked during the drier months as the lesser rainfall also provides for lesser leeches. You will also have to take plenty of water as there are no clean water sources as you make the climb. The summit of the tallest peak of the mountain range can be reached by several trails. However the easiest route starts off at the 3rd Mile Post on the Passara-Badulla Road. It can be traversed in a vehicle until the base of the mountain reached in the Deyangalla division in Glenalpin Estate.
  </p>
-<p style="color:white"> 
+<p style="color:black"> 
 While traveling the initial stage of the hike in the vehicle, there are some viewpoints where you may wish to stop and take photographs of the surrounding landscape. So keep an eye out. Once you come to the base of the mountain, you will be faced with hiking through the tea estate of Glenalpin to the beginning of the trail that leads to the summit. You may need a guide as the starting point is quite elusive and well hidden amongst the tea bushes. Your hike will begin in earnest at the place where the tea estate splits the forest that covers Namunukula. There’s a village nearby that you can seek directions and assistance from.
  </p>
- <p style="color:white"> 
+ <p style="color:black"> 
 Once you start on the actual trail, it becomes pretty direct. It’s a straight pathway to the summit; though there are other routes that are less direct. While the trail is not an arduous one; you will pass some exciting parts where you get to walk through dense forest, or hike along sections with devastating views. Once you get to the summit you will be faced by two time shrines to the local religions. There is bald patch of land on the summit, that is often used for camping.
  </p>
+<div class="text-center">
+                	<center><div class="col-md-4 col-sm-4 alert-info">
+                           
+                    </div></center>
+           <div class="div1">
+		<div class="image">
+<div class="img"><img src="img\namu1.jpg" width="100% height=90%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\namu2.jpg" width="100% height=90%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\namu3.jpg" width="100% height=100%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\namu4.jpg" width="100% height=110%"></div>
+</div></div>
+ 
 <h3> Map</h3>
  <div id="map"></div>
     <script>
       function initMap() {
-        var uluru = {lat: 7.0170667, lng: 81.0623103};
+        var uluru = {lat:6.8745, lng:81.1155};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
           center: uluru
@@ -258,36 +275,37 @@ Once you start on the actual trail, it becomes pretty direct. It’s a straight 
     </script>
 </div></div>
 <br><br>
+
+
+<h3><center>Go to other places</center></h3>
+					<div class="text-center">
+                	<center><div class="col-md-4 col-sm-4 alert-info">                          
+                    </div></center>
 <div class="div1">
     <div class="image">
-<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place3.php"><img src="img\Ella.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></div></div>
+<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place3.php"><img src="img\ella1.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></a></div>
+</div><div class="image">
 
     </div>
-
-</div></div>
-
 
 
 
 </div></b></h5></center></div>
-<a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="Namunukula" data-label_2="WEATHER" data-theme="original" >Namunukula WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
+
 
 <footer>
 
@@ -376,4 +394,4 @@ Once you start on the actual trail, it becomes pretty direct. It’s a straight 
 
 
 
-</h5></center></div></BODY></HTML>
+</h5></center></div></body></HTML>

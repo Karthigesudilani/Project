@@ -118,9 +118,12 @@ transform: scale(1.15);
 </HEAD>
 
 <BODY>
-<div style=" color: black; font-style:italic;">
-  <center><h3><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
-</h3></center></div>
+<div style = "background-image:url('Badulla.jpg');  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;">
+<div style="background-color: Gray;font-style:italic;">
+  <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
+</h5></center></div>
 
 <!--Nav Bar-->  
 <div>
@@ -130,7 +133,7 @@ transform: scale(1.15);
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="add_home.php">Home</a>
+      <a class="nav-link" href="Home.php">Home</a>
     </li>
  
      <li class="nav-item">
@@ -138,75 +141,58 @@ transform: scale(1.15);
     </li>
 
     <li class="nav-item">
-      <form action="add_transport.php" method="POST">                 
-                
-                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Transport" name="submit">
-                  
-             </form>
+      <a class="nav-link" href="add_transport.php">Transport</a>
     </li>
         
 
- 
+     <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
     
     <li class="nav-item">
-      <form action="add_guide.php" method="POST">                 
-                
-                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Guide" name="submit">
-                  
-             </form>
-      
+      <a class="nav-link" href="add_guide.php">Guide</a>
     </li>
 
-   
+     <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
  
      <li class="nav-item">
-       <form action="add_driver.php" method="POST">                 
-                
-                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Driver" name="submit">
-                  
-             </form>
+      <a class="nav-link" href="add_driver.php">Driver</a>
     </li>
   
-   
+     <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
     
      <li class="nav-item">
-        <form action="add_package.php" method="POST">                 
-                
-                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Package" name="submit">
-                  
-             </form>
+      <a class="nav-link" href="package.php">Package</a>
     </li>
    
      <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
-  <li class="nav-item">
-    <form action="add_newguide.php" method="POST">                 
-                
-                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="New_Guide" name="submit">
-                  
-             </form>
-      
+  
+    
+    <li class="nav-item">
+      <a class="nav-link" href="places.php">Tourist Attraction Places</a>
     </li>
- 
+  
+    <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
+    
     
       <li class="nav-item">
-        <form action="add_newdriver.php" method="POST">                 
-                
-                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="New_Driver" name="submit">
-                  
-             </form>
-     
+      <a class="nav-link" href="about.php">About Us</a>
     </li>
 
-
+     <li class="nav-item">
+      <a class="nav-link" href=""></a>
+    </li>
    
  <li class="nav-item" >
-       <form action="add_cancelbooking.php" method="POST">                 
-                
-                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Cancel Booking" name="submit">
-                  
-             </form>
+      <a class="nav-link" href="add_cancelbooking.php">Cancel Booking</a>
     </li>
 
      <li class="nav-item">
@@ -214,30 +200,8 @@ transform: scale(1.15);
     </li>
 
    <li class="nav-item" >
-       <form action="add_Booikg.php" method="POST">                 
-                
-                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Booking" name="submit">
-                  
-             </form>
+      <a class="nav-link" href="add_Booikg.php">Booking</a>
     </li>
-
- <li class="nav-item" >
-       <form action="add_leavedriver.php" method="POST">                 
-                
-                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Driver_Leave" name="submit">
-                  
-             </form>
-    </li>
-
-
-     <li class="nav-item" >
-       <form action="add_leaveguide.php" method="POST">                 
-                
-                  <input style="padding-top:5px;" class="btn btn-dark nav-link" type="submit" value="Guide_Leave" name="submit">
-                  
-             </form>
-    </li>
-
  <li class="nav-item">
       <a class="nav-link" href=""></a>
     </li>
@@ -251,9 +215,8 @@ transform: scale(1.15);
     </li>
   </ul>
 </nav>
-</div>
 <center>
-<div style="background-color: #E0E6F8; width: 60% "> <br><h1><u> Add a Trasport</u></h1>    
+<div style="background-color: #E0E6F8; width: 60% "> <br><h1> Add a Trasport</h1>    
                                     
 <form   id="add_meal" method="POST" action="addnew_tr_back.php" enctype="multipart/form-data">
 
@@ -276,7 +239,7 @@ transform: scale(1.15);
                        
                                                     </div>
                                                     <div class="w3-padding">
-     <input class="w3-input w3-border" name="fees" type="text" placeholder="Amount per KM"  id="fees"></div>      <br />
+     <input class="w3-input w3-border" name="amount" type="text" placeholder="Amount per KM"  id="amount"></div>      
 <div class="w3-row-padding w3-margin-bottom">   
 <div class="w3-half">
 <input type="submit" class="w3-btn w3-green w3-block " name="meal_add" value="Add Transport">

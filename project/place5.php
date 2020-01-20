@@ -47,7 +47,7 @@
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
-  background-color :black;
+  background-color :white;
   flex-wrap: nowrap;
 }
 
@@ -117,10 +117,8 @@ transform: scale(1.15);
 </style>
 </HEAD>
 
-<BODY>
-<div style = "background-image:url('narangala.jpg');  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;">
+<body style="background-color: white;">
+
 <div style="background-color: Gray;font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
@@ -222,29 +220,48 @@ transform: scale(1.15);
                           <br />  <h3> Tourist Attraction Places in Badulla</h3>
                            
                     </div></center>
+					
+<a class="weatherwidget-io" href="https://forecast7.com/en/6d9981d05/badulla/" data-label_1="Dunhida" data-label_2="WEATHER" data-theme="original" >BADULLA WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
 
 <div class="container">
     <div class="panel panel-default">
 <br>
-<h3 style="color:gray"> Narangala</h3>
-<p style="color:white"> 
+<h3 style="color:#1c2833 "> Narangala</h3>
+<p style="color:black"> 
 Beautiful Narangala, with its golden grass, rises up to a height of over 1500m in the Uva Province of Sri Lanka. The summit of this second highest mountain in Uva, provides some of the very best views in the entire tropical island. In addition to it; the reasonable challenge that climbing it offers has made it a great favorite amongst hikers.
  </p>
-<p style="color:white"> 
-The hiking trail starts in the Thangamalai Estate area. The name literally means ‘Golden Mountain’ in Tamil and is derived from the golden grasses that blanket the slopes of Narangala. One of the most defining features of Narangala is its sharply rectangular peak making it quite an attractive sight even from the far distance.
+<p style="color:black"> 
+The hiking trail starts in the Thangamalai Estate area. The name literally means "Golden Mountain" in Tamil and is derived from the golden grasses that blanket the slopes of Narangala. One of the most defining features of Narangala is its sharply rectangular peak making it quite an attractive sight even from the far distance.
 
 Hikers should stop their vehicles at the Hindu Temple in the estate. If you have no guide with you, some of the locals will be happy to help direct. You will have to climb along little foot trails in the tea estate until you find a large pipe line that supplies water to the estate. You will then follow the pipe until the point hat it reaches a road that runs through the estate. There will be many pretty views of slopes coated in the bright green of tea trees; that you can take photographs of. After following the estate road for a while you will reach the point from which you start the climb up the mountain.
  </p>
- <p style="color:white"> 
+ <p style="color:black"> 
 The initial portion of the climb will be through a grove of turpentine trees. The leaf fall from these trees are very slippery; which added to the slope of the ground makes footing quite treacherous. The hike through the yellow gold grasses of Narangala’s slopes are idyllic though,
 
 making up for the difficulty in getting to them. There are occasional wildlife and their tracks to be seen; so go about without disturbing them. You will traverse four of the lower peaks of Narangala, all with great views, before reaching the summit.
  </p>
+ <div class="text-center">
+                	<center><div class="col-md-4 col-sm-4 alert-info">
+                           
+                    </div></center>
+           <div class="div1">
+		<div class="image">
+<div class="img"><img src="img\madol1.jpg" width="100% height=90%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\madol2.jpg" width="100% height=90%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\madol3.jpg" width="100% height=100%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\madol4.jpg" width="100% height=110%"></div>
+</div></div>
 <h3> Map</h3>
  <div id="map"></div>
     <script>
       function initMap() {
-        var uluru = {lat: 7.0170667, lng: 81.0623103};
+        var uluru = {lat: 7.0290, lng: 80.9968};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
           center: uluru
@@ -262,25 +279,32 @@ making up for the difficulty in getting to them. There are occasional wildlife a
     </script>
 </div></div>
 <br><br>
+
+    <h3><center>Go to other places</center></h3>
+					<div class="text-center">
+                	<center><div class="col-md-4 col-sm-4 alert-info">                          
+                    </div></center>
 <div class="div1">
     <div class="image">
-<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place3.php"><img src="img\Ella.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></div></div>
+<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place3.php"><img src="img\ella1.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></a></div>
+ </div><div class="image">
+<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></a></div>
+</div><div class="image">
 
     </div>
+
 
 </div></div>
 
@@ -288,10 +312,7 @@ making up for the difficulty in getting to them. There are occasional wildlife a
 
 
 </div></b></h5></center></div>
-<a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="Narangala" data-label_2="WEATHER" data-theme="original" >Narangala WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
+
 
 <footer>
 
@@ -380,4 +401,4 @@ making up for the difficulty in getting to them. There are occasional wildlife a
 
 
 
-</h5></center></div></BODY></HTML>
+</h5></center></div></body></HTML>

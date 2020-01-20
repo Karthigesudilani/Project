@@ -53,7 +53,7 @@ $conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
             } else{
                 move_uploaded_file($_FILES["photo"]["tmp_name"], "upload/" . $filename);
                 
-               $sql = "INSERT INTO guide (guideId, gName,language,gNIC,gEmail,gPhoneNo,gqualification,password,Image,fees) VALUES('','$gName','$language','$gNIC','$gEmail','$gPhoneNo','$gqualification','$password','$filename','$fees');";
+               $sql = "INSERT INTO guide (guideId, gName,language,gNIC,gEmail,gPhoneNo,gqualification,password,Image,fees) VALUES('','$gName','$language','$gNIC','$gEmail','$gPhoneNo','&gqualification','$password','$filename','fees');";
 				echo $sql;
 			mysqli_query($conn,$sql);
 			 header("location:./add_guide.php");

@@ -1,9 +1,46 @@
-<?php 
+<?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "ttgms";
 
-session_start();
-$connect = mysqli_connect("localhost", "root", "", "ttgms");
-?>
+        try{
+          $conn = mysqli_connect($servername, $username, $password, $dbname);
+          
+        }
 
+        catch(MySQLi_Sql_Exception $ex){
+          echo("error in connection");
+        }
+
+        if(isset($_POST['register'])){
+          $fName = $_POST['fName']; 
+          $lName = $_POST['lName']; 
+          $uNIC = $_POST['uNIC']; 
+          $uAge = $_POST['uAge']; 
+          $userMail = $_POST['userMail']; 
+          $password = $_POST['password']; 
+          
+          
+          $register_query = "INSERT INTO `user`(`fName`, `lName`, `uNIC`, `uAge`, `userMail`, `password`) VALUES ('$fName', '$lName', '$uNIC', '$uAge', '$userMail', '$password')";
+
+          try{
+            $register_result = mysqli_query($conn, $register_query);
+            if(mysqli_affected_rows($conn)>0){
+              echo"<script>alert('registration successful');</script>";
+            }
+            else{
+             
+            echo"<script>alert('error in registration');</script>";
+            }
+            
+          }
+          catch(Exception $ex){
+            echo("error".$ex->getMessage());
+          }
+          }
+
+        ?>
 
 <HTML lang="en">
 <HEAD>
@@ -147,7 +184,7 @@ transform: scale(1.15);
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="Transportation.php">Transport</a>
+      <a class="nav-link active" href="Transportation.php">Transport</a>
     </li>
         
 
@@ -221,167 +258,8 @@ transform: scale(1.15);
     </li>
   </ul>
 </nav>
-</div><center>
-<div style="background-color: #E0E6F8; width: 80%; clear:both">
-<br />
-<h3><u>Order Details</u></h3>
-      <br />
-      
-      <div class="table-responsive">
-        <form   id="add_meal" method="POST" action="BookingBack.php" enctype="multipart/form-data">
-        <table class="table table-bordered">
-          <tr>
-            <th width="40%">Details</th>            
-            <th width="20%">Price</th>
-            <th width="15%">Action</th>
-          </tr>
-          <?php
-          $total = 0;
-          $vID = 0;
-          $guideId = 0;
-          $driverId = 0;
-          if(!empty($_SESSION["vehicle"]))
-          {
-            
-            foreach($_SESSION["vehicle"] as $keys => $values)
-            {
-          ?>
-          <tr>
-            <td>Transportation Id :- <?php echo $values["vId"]; ?></td>
-            
-            <td>Rs <?php echo $values["fees"]; ?></td>
-            
-            <td><a href="Transportation.php?action=delete&id=<?php echo $values["vId"]; ?>"><span class="text-danger">Remove</span></a></td>
-          </tr>
-<div class="w3-padding">
-Vehicle Id :-
-     <input class="w3-input w3-border" name="vId" type="text" value="<?php echo $values["vId"]; ?>"  id="vId"></div>   
-     <br />
-          <?php
-              $total = $total + $values["fees"] ;
-              $vId = $values["vId"] ;
-            }
-          
-          }
+</div>
 
-
-          if(!empty($_SESSION["guide"]))
-          {
-                      foreach($_SESSION["guide"] as $keys => $values)
-            {
-          ?>
-          <tr>
-            <td>Guide Id :- <?php echo $values["guideId"]; ?></td>
-            
-            <td>Rs <?php echo $values["fees"]; ?></td>
-            
-            <td><a href="guide.php?action=delete&id=<?php echo $values["guideId"]; ?>"><span class="text-danger">Remove</span></a></td>
-          </tr>
-              <div class="w3-padding">
-      Guide ID :-
-     <input class="w3-input w3-border" name="guideId" type="text" value="<?php echo $values["guideId"]; ?>"  id="guideId"></div>   
-     <br />
-          <?php
-             $total = $total + $values["fees"] ;
-              $guideId = $guideId;
-              $vId = $vId ;
-            }
-            
-          
-          }
-
-
-          if(!empty($_SESSION["driver"]))
-          {
-          
-            foreach($_SESSION["driver"] as $keys => $values)
-            {
-          ?>
-          <tr>
-            <td>Driver Id :- <?php echo $values["driverId"]; ?></td>
-            
-            <td>Rs <?php echo $values["fees"]; ?></td>
-          
-            <td><a href="driver.php?action=delete&id=<?php echo $values["driverId"]; ?>"><span class="text-danger">Remove</span></a></td>
-          </tr>
-            <div class="w3-padding">
-              Driver ID :-
-     <input class="w3-input w3-border" name="driverId" type="text" value="<?php echo $values["driverId"]; ?>"  id="driverId"></div>   
-     <br />
-     <div class="w3-padding">
-  Total Price :-
-     <input class="w3-input w3-border" name="total" type="text" value="<?php echo ($total); ?> "  id="total"></div>  
-     <br />
-          <?php
-              $total = $total + $values["fees"] ;
-               $driverId = $values["driverId"] ;
-               $guideId = $guideId;
-              $vId = $vId ;
-            }
-
-          }
-
-          ?>
-        <tr>
-            <td colspan="2" align="right">Total</td>
-            <td align="right">Rs. <?php echo number_format($total, 2); ?></td>
-            
-          </tr>
-         </table>
-            
-
-<div style="background-color: #E0E6F8; width: 50% "> <br><h1><u> Check Out Form</u></h1>    <br /><br>
-
-<div class="w3-half w3-padding">  
-Full Name :-    
-    <input class="w3-input w3-border" name="fullName" type="text" placeholder="Full Name"  id="fullName"></div><br />
-
- 
-   
-
-    <div class="w3-padding">
-      Start Date :-
-     <input class="w3-input w3-border" name="startDate" type="text" placeholder="Start Date"  id="startDate"></div>   
-     <br />
-     <div class="form-group">
-          <label class="col-sm-3 control-label">Date of join</label>
-          <div class="col-sm-4">
-            <input type="text" name="jdate" class="input-group date form-control" date="" data-date-format="yyyy-mm-dd" placeholder="0000-00-00" required>
-          </div>
-        </div>
-     
-<div class="w3-padding">
-  End Date :-
-     <input class="w3-input w3-border" name="endDate" type="text" placeholder="End Date"  id="endDate"></div>   
-     <br />
-
-<div class="w3-padding">
-  User Mail :-
-     <input class="w3-input w3-border" name="userMail" type="text" placeholder="userMail"  id="userMail"></div>   
-     <br />
-
-
-     <div id="result"></div>
-                                                                                
-                                </div> 
-
-<div class="w3-row-padding w3-margin-bottom">   
-<div class="w3-half">
-<input type="submit" class="w3-btn w3-green w3-block " name="register" value="Booking">
-                                                </div> <br />
-<div class="w3-half">
-<input type="reset" class="w3-btn w3-red w3-block " name="meal-cancel" value="Cancel">
-                                                </div>                              
-                                            </div>
-                                                    <br /><br />            
-                                        </form>
-                                    </div><br /><br />
-                                            
-                            </div> 
-                        </div> 
-                    </div>  
-
-</form></table></div></div></center>
 <footer>
   <div class="container">
  

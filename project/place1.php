@@ -47,7 +47,7 @@
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
-  background-color :black;
+  background-color :white;
   flex-wrap: nowrap;
 }
 
@@ -117,11 +117,9 @@ transform: scale(1.15);
 </style>
 </HEAD>
 
-<BODY>
-<div style = "background-image:url('Dunhida.png');  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;">
-<div style="background-color: Gray;font-style:italic;">
+<body style="background-color: white;">
+
+<div style="background-color:white;font-style:italic;">
   <center><h5><b>Tourists Transportation and Guiding Management System for a Travel Agency In Badulla.
 </h5></center></div>
 
@@ -222,23 +220,45 @@ transform: scale(1.15);
                           <br />  <h3> Tourist Attraction Places in Badulla</h3>
                            
                     </div></center>
+<a class="weatherwidget-io" href="https://forecast7.com/en/6d9981d05/badulla/" data-label_1="Dunhida" data-label_2="WEATHER" data-theme="original" >BADULLA WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
 
 <div class="container">
     <div class="panel panel-default">
 <br>
-<h3 style="color:gray"> Dunhinda Fall</h3>
-<p style="color:white"> 
+<h3 style="color: #1c2833 "> Dunhinda Fall</h3>
+<p style="color:black"> 
 This fall is steeped in history. The area was once inhabited by indigenous people – the Veddha tribe. During the time of King Rajasinhe, a giant fern got stuck at the top of the fall, between two mountains. This acted as a dam, which resulted in the flooding of Badulla town. 
 Seeing the gravity of the situation, the king entrusted the task of clearing the sluice to a person named ‘Ranhavadidaraya’. After toiling for three months he managed to clear the water and the town re-emerged. The fern was swept away but got stuck again at a place now known as Pussellawa (‘pus’ meaning fern). </p>
-<p style="color:white">
+<p style="color:black">
 Waterfall is enriched with Uma Oya, Hal Oya and small rivers from Bandarawela and Welimada areas.</p>
-<p style="color:white"> 
+<p style="color:black"> 
 On the way to the waterfall you can see another small waterfall named Kuda Dunhinda at a glance. Thus you can taste and refresh yourself by having a native herbal drink by the venders on sides of the way to the water fall. At the end of this journey you can meet a secured stage constructed for the viewers and enjoy the water fall. If you are very much confident, you can reach the foot of the water fall and cross the river. While enjoying the fall it’s better to remind that do not go closer to the fall or bathe as it is deep and full of slippery rocks and stones near the bottom of the water fall. 
-</p><p style="color:white">
+</p><p style="color:black">
 Hence Randenigala ,Victoria and Rantambe are identified as the three main water valleys down sided from the Dunhinda Water fall, apart from being a natural water resource it has been a relaxation for the tourists.
 </p>
+
+</table></div></div></div>
+<br />
+<br />                
+          	<div class="text-center">
+                	<center><div class="col-md-4 col-sm-4 alert-info">
+                           
+                    </div></center>
+           <div class="div1">
+		<div class="image">
+<div class="img"><img src="img\d5.jpg" width="100% height=90%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\d7.jpg" width="100% height=90%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\Dunhida1.png" width="100% height=100%" ></div>
+</div><div class="image">
+<div class="img"><img src="img\Dunhida2.jpg" width="100% height=110%"></div>
+</div></div>
 <h3> Map</h3>
- <div id="map"></div>
+ <div id="map" style="width:100%;height:400px;"></div>
     <script>
       function initMap() {
         var uluru = {lat: 7.0170667, lng: 81.0623103};
@@ -259,36 +279,40 @@ Hence Randenigala ,Victoria and Rantambe are identified as the three main water 
     </script>
 </div></div>
 <br><br>
-<div class="div1">
-    <div class="image">
-<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place3.php"><img src="img\Ella.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></div></div>
- <div class="image">
-<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></div></div>
-    </div>
-
-</div></div>
+</table></div></div></div>
+<br />
+<br />
+					<h3><center>Go to other places</center></h3>
+          	<div class="text-center">
+                	<center><div class="col-md-4 col-sm-4 alert-info">
+                           
+                    </div></center>
+           <div class="div1">
+		<div class="image">
+<div class="img"><a class="nav-link" href="place1.php"><img src="img\Dunhida.png" width="100%" ></a></div>
+	</div><div class="image">
+<div class="img"><a class="nav-link" href="place2.php"><img src="img\Muthiyanganaya.png" width="100%" ></a></div>
+	</div><div class="image">
+<div class="img"><a class="nav-link" href="place3.php"><img src="img\ella1.jpg" width="100%" ></a></div>
+	</div><div class="image">
+<div class="img"><a class="nav-link" href="place4.php"><img src="img\madolsima.jpg" width="100%" ></a></div>
+	</div><div class="image">
+<div class="img"><a class="nav-link" href="place5.php"><img src="img\narangala.jpg" width="100%" ></a></div>
+	</div><div class="image">
+<div class="img"><a class="nav-link" href="place6.php"><img src="img\Dowa.jpg" width="100%" ></a></div>
+	</div><div class="image">
+<div class="img"><a class="nav-link" href="place7.php"><img src="img\Ninearch.jpg" width="100%" ></a></div>
+	</div><div class="image">
+<div class="img"><a class="nav-link" href="place8.php"><img src="img\namunukul.jpg" width="100%" ></a></div>
+	</div><div class="image">
+</div>
 
 
 
 
 </div></b></h5></center></div>
 
-<a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="Dunhinda Fall" data-label_2="WEATHER" data-theme="original" >Dunhinda Fall WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
+
 <footer>
 
  
@@ -376,4 +400,4 @@ Hence Randenigala ,Victoria and Rantambe are identified as the three main water 
 
 
 
-</h5></center></div></BODY></HTML>
+</h5></center></div></body></HTML>

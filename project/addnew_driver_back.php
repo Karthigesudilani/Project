@@ -51,7 +51,7 @@ $conn = mysqli_connect($dbServername, $dbUsername,$dbPassword,$dbName);
             } else{
                 move_uploaded_file($_FILES["photo"]["tmp_name"], "upload/" . $filename);
                 
-               $sql = "INSERT INTO driver (driverId, dName,dEmail,dPhoneNo,dAge,dqualification,password,Image,fees) VALUES('','$dName','$dEmail','$dPhoneNo','$dAge','$dqualification','$password','$filename','$fees');";
+               $sql = "INSERT INTO driver (driverId, dName,dEmail,dPhoneNo,dAge,dqualification,password,Image,fees) VALUES('','$dName','$dEmail','$dPhoneNo','$dAge','&dqualification','$password','$filename','$fees');";
 				echo $sql;
 			mysqli_query($conn,$sql);
 			 header("location:./add_driver.php");
