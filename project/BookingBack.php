@@ -21,10 +21,10 @@
           $startDate = $_POST['startDate']; 
           $endDate = $_POST['endDate'];            
           $userMail = $_POST['userMail']; 
-          $price  = $_POST['price']; 
+          $total  = $_POST['total']; 
                    
           
-          $register_query = "INSERT INTO `booking`(`bId`,`fullName`, `guideId`, `driverId`, `vId`, `startDate`, `endDate`,`userMail`,`price`) VALUES ('','$fullName', '$guideId', '$driverId', '$vId', '$startDate', '$endDate','$userMail','$price')";
+          $register_query = "INSERT INTO `booking`(`bId`,`fullName`, `guideId`, `driverId`, `vId`, `startDate`, `endDate`,`userMail`,`total`) VALUES ('','$fullName', '$guideId', '$driverId', '$vId', '$startDate', '$endDate','$userMail','$total')";
 
           try{
             $register_result = mysqli_query($conn, $register_query);
